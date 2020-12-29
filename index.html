@@ -1,2 +1,111 @@
-<h1>hi</h1>
-will set this up later kthx
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Nora's Website or whatever</title>
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<style>
+			#BGElement {
+				position: fixed;
+				display: block;
+				left: 0;
+				top: 0;
+				width: 100vw;
+				height: 100vh;
+				z-index: -2;
+			}
+			.bgcontainer {
+				background: #1a1a1a98;
+				min-height: 120vh;
+				min-width: 80vw;
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				z-index: -1;
+				backdrop-filter: blur(2px);
+			}
+			.container {
+				color: #ffffff;
+				/* position: absolute; */
+				/* top: 0; */
+			}
+
+			.modalFrame,
+			.modalFrame * {
+				z-index: 100;
+			}
+
+			.modal {
+				background: #1a1a1a;
+				color: #ffffff;
+			}
+			.modal-footer {
+				background: #2a2b2c !important;
+				color: #ffffff !important;
+			}
+			.modal-footer > .btn-flat {
+				color: #ffffff !important;
+			}
+
+			.projectbtn {
+				margin-left: 0 !important;
+				margin-right: 0 !important;
+			}
+		</style>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	</head>
+	<body style="background: #2a2b2c">
+		<iframe
+			src="https://yeetchat.github.io/Background_Login/"
+			frameborder="0"
+			id="BGElement"
+			name="BGElement"
+		></iframe>
+		<nav>
+			<div class="nav-wrapper purple accent-3">
+				<a href="/" class="brand-logo">&nbsp;Nora's website or whatever</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<!-- <li><a href="sass.html">Sass</a></li> -->
+					<!-- <li><a href="badges.html">Components</a></li>
+					<li><a href="collapsible.html">JavaScript</a></li> -->
+				</ul>
+			</div>
+		</nav>
+		<div class="bgcontainer z-depth-5"></div>
+		<div class="container" include="./embeded.index.contents.html">
+			<div class="progress" id="loader">
+				<div class="indeterminate"></div>
+			</div>
+			<!-- <iframe
+				src="./embeded.projects.html"
+				frameborder="0"
+				onload="document.getElementById('loader').remove()"
+			></iframe> -->
+		</div>
+	</body>
+	<div include="./embeded.projects.html" class="modalFrame"></div>
+	<div include="./embeded.agpl.html" class="modalFrame"></div>
+	<script src="import.js"></script>
+</html>
+<script>
+	let instances;
+	let interv;
+	interv = setInterval(() => {
+		let elems = document.querySelectorAll('.modal');
+		instances = M.Modal.init(elems, {});
+		if (instances[1]) {
+			clearInterval(interv);
+		}
+	}, 100);
+</script>
