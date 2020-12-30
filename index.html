@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+		<!-- <meta charset="UTF-8" /> -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Nora's Website or whatever</title>
 		<link
@@ -18,10 +19,13 @@
 			content="0J3's corner of the internet or whatever"
 		/>
 		<meta name="keywords" content="0J3,nora,website,ass" />
-		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 
-		<link rel="preload" href="favicon.png" />
-		<link rel="preload" href="https://yeetchat.github.io/Background_Login/" />
+		<link rel="preload" href="favicon.png" as="image" />
+		<link
+			rel="preload"
+			href="https://yeetchat.github.io/Background_Login/"
+			as="document"
+		/>
 
 		<link rel="shortcut icon" href="favicon.png" />
 
@@ -46,7 +50,9 @@
 				-webkit-transform: translate(-50%, -50%);
 				transform: translate(-50%, -50%);
 				z-index: -1;
-				backdrop-filter: blur(2px);
+				backdrop-filter: blur(
+					2px
+				); /* https://validator.w3.org/nu/?doc=https%3A%2F%2F0j3.xyz%2F will warn for this, but it exists on chrome, where we want it to be used, so ignore that error plz */
 			}
 			.container {
 				color: #ffffff;
@@ -111,7 +117,7 @@
 			</div>
 		</nav>
 		<div class="bgcontainer z-depth-5"></div>
-		<div class="container" include="./embeded.index.contents.html">
+		<div class="container" w3include="./embeded.index.contents.html">
 			<div class="progress" id="loader">
 				<div class="indeterminate"></div>
 			</div>
@@ -122,9 +128,9 @@
 			></iframe> -->
 		</div>
 	</body>
-	<div include="./embeded.projects.html" class="modalFrame"></div>
-	<div include="./embeded.socials.html" class="modalFrame"></div>
-	<div include="./embeded.agpl.html" class="modalFrame"></div>
+	<div w3include="./embeded.projects.html" class="modalFrame"></div>
+	<div w3include="./embeded.socials.html" class="modalFrame"></div>
+	<div w3include="./embeded.agpl.html" class="modalFrame"></div>
 	<script src="import.js"></script>
 </html>
 <script>

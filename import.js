@@ -5,7 +5,7 @@ const includeHTML = () => {
 	for (i = 0; i < z.length; i++) {
 		elmnt = z[i];
 		/*search for elements with a certain atrribute:*/
-		file = elmnt.getAttribute('include');
+		file = elmnt.getAttribute('w3include');
 		if (file) {
 			/* Make an HTTP request using the attribute value as the file name: */
 			xhttp = new XMLHttpRequest();
@@ -18,7 +18,7 @@ const includeHTML = () => {
 						elmnt.innerHTML = 'Page not found.';
 					}
 					/* Remove the attribute, and call this function once more: */
-					elmnt.removeAttribute('include');
+					elmnt.removeAttribute('w3include');
 					includeHTML();
 				}
 			};
