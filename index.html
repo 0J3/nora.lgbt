@@ -94,7 +94,7 @@
 	<body style="background: #2a2b2c">
 		<iframe
 			src="https://yeetchat.github.io/Background_Login/"
-			frameborder="0"
+			style="border: none"
 			id="BGElement"
 			name="BGElement"
 		></iframe>
@@ -127,20 +127,20 @@
 				onload="document.getElementById('loader').remove()"
 			></iframe> -->
 		</div>
+		<div w3include="./embeded.projects.html" class="modalFrame"></div>
+		<div w3include="./embeded.socials.html" class="modalFrame"></div>
+		<div w3include="./embeded.agpl.html" class="modalFrame"></div>
+		<script src="import.js"></script>
+		<script>
+			let instances;
+			let interv;
+			interv = setInterval(() => {
+				let elems = document.querySelectorAll('.modal');
+				instances = M.Modal.init(elems, {});
+				if (instances[2]) {
+					clearInterval(interv);
+				}
+			}, 100);
+		</script>
 	</body>
-	<div w3include="./embeded.projects.html" class="modalFrame"></div>
-	<div w3include="./embeded.socials.html" class="modalFrame"></div>
-	<div w3include="./embeded.agpl.html" class="modalFrame"></div>
-	<script src="import.js"></script>
 </html>
-<script>
-	let instances;
-	let interv;
-	interv = setInterval(() => {
-		let elems = document.querySelectorAll('.modal');
-		instances = M.Modal.init(elems, {});
-		if (instances[2]) {
-			clearInterval(interv);
-		}
-	}, 100);
-</script>
