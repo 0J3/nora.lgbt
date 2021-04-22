@@ -89,7 +89,7 @@ export default class ProfilePage extends React.Component {
 					</div>
 				</div>
 				<div className="right">
-					<h2 className="aboutText">About</h2>
+					<p className="aboutText">About</p>
 					<p></p>
 				</div>
 			</div>
