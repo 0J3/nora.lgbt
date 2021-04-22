@@ -8,6 +8,71 @@ import GitHub from '../icons/GitHub.png';
 import Roblox from '../icons/Roblox.png';
 import Twitch from '../icons/Twitch.png';
 
+if (!Date.now) {
+	Date.now = () => new Date().getTime();
+}
+
+interface t {
+	text?: string;
+	timerID?: any;
+}
+
+const timeSince = (when: number) => {
+	return Date.now() - when;
+};
+
+const getYearsSince = (epoch: number) => {
+	epoch = epoch * 1000;
+	const getMonthDays = (mo: number) => {
+		const t31: number[] = [0, 2, 4, 6, 8, 10];
+		return t31.includes(mo) ? 31 : mo === 1 ? 28 : 30;
+	};
+
+	const date = new Date(timeSince(epoch));
+	const mo = date.getUTCMonth();
+	let days = (date.getUTCFullYear() - 1970) * 365;
+	for (let i = 0; i <= mo; i++) days = days + getMonthDays(i);
+	days = days + date.getUTCDay();
+	days = days + date.getUTCHours() / 24;
+	days = days + date.getUTCMinutes() / 60 / 24;
+	days = days + date.getUTCSeconds() / 60 / 60 / 60;
+	return days / 365;
+};
+class TimeSinceBDay extends React.Component<{}, t> {
+	text: string = '';
+	timer: any;
+
+	constructor(props: any) {
+		super(props);
+		this.state = { text: '', timerID: null };
+	}
+
+	getText() {
+		const x = 1000000000;
+		return (Math.floor(getYearsSince(1196121600) * x) / x).toString();
+	}
+	tick() {
+		this.text = this.getText();
+		this.setState({
+			text: this.text,
+		});
+	}
+
+	componentDidMount() {
+		this.timer = setInterval(() => this.tick(), 100);
+	}
+
+	componentWillUnmount() {
+		clearInterval(this.timer);
+	}
+
+	render() {
+		const v = <span>{this.state.text}</span>;
+
+		return v;
+	}
+}
+
 class ProfileLink extends React.Component<{
 	dest: string;
 	img: string;
@@ -90,7 +155,9 @@ export default class ProfilePage extends React.Component {
 				</div>
 				<div className="right">
 					<p className="aboutText">About</p>
-					<p></p>
+					<p className="aboutValue">
+						I'm Nora, a <TimeSinceBDay /> year old
+					</p>
 				</div>
 			</div>
 		);
