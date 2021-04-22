@@ -1,3 +1,5 @@
+@use './Manrope';
+
 .profile {
 	background: #23222b;
 
@@ -57,6 +59,13 @@
 	.right {
 		border-bottom-left-radius: 20px;
 		border-bottom-right-radius: 20px;
+
+		padding-left: 20px;
+
+		.aboutText::before {
+			content: '\f5ac';
+			font-family: Manrope, sans-serif;
+		}
 	}
 }
 

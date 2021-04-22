@@ -14,6 +14,7 @@ const getRedirComponent = (target: string) => {
 		return <div>Redirecting...</div>;
 	};
 };
+const grc = getRedirComponent;
 
 const ghComponent = getRedirComponent('https://github.com/0j3/?ref=nora.lgbt');
 
@@ -26,6 +27,11 @@ const routes = [
 	{ path: '/goto/', Component: Goto, Exact: false },
 	{ path: '/github', Component: ghComponent, Exact: false },
 	{ path: '/gh', Component: ghComponent, Exact: false },
+	{
+		path: '/source',
+		Component: grc('https://github.com/0j3/nora.lgbt/?ref=nora.lgbt'),
+		Exact: false,
+	},
 ];
 
 const App = () => {
