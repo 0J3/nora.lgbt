@@ -138,8 +138,8 @@ $widthToggle2: 600px;
 			}
 		}
 
-		.widget {
-			float: right;
+		.widget:nth-child(1) {
+			padding-right: 10%;
 		}
 
 		.sectionTitle {

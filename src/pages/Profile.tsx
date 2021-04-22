@@ -159,8 +159,9 @@ export default class ProfilePage extends React.Component {
 					<div className="widget">
 						<p className="aboutText sectionTitle">About</p>
 						<p className="aboutValue">
-							I'm Nora, a <TimeSinceBDay /> year old Programmer, Train
-							Enthusiast, Weeb, Furry, Game Developer and Web Designer.
+							I'm Nora, a <TimeSinceBDay /> year old Programmer/Computer
+							Scientist, Train Enthusiast, Weeb, Furry, Game Developer and Web
+							Designer.
 						</p>
 					</div>
 					<div
