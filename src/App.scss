@@ -14,13 +14,14 @@ $bg: #16151d;
 	font-style: normal;
 	font-weight: 700;
 	font-display: swap;
-	src: url(https://0j3.github.io/public/DiscordFont.ttf) format('truetype');
+	src: url(https://nora.lgbt/DiscordFont.ttf) format('truetype');
 }
 
 // Global Styles
 
 html,
-body {
+body,
+#root {
 	background: var(--bg);
 }
 

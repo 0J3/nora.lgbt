@@ -8,6 +8,13 @@ import Profile from './pages/Profile';
 import TestsCounter from './pages/Counter';
 import Goto from './pages/goto';
 
+const getRedirComponent = target => {
+	return () => {
+		document.location.replace(target);
+		return <div>Redirecting...</div>;
+	};
+};
+
 const routes = [
 	{ path: '/', Component: Index, Exact: true },
 	{ path: '/bio', Component: Profile },
@@ -15,6 +22,11 @@ const routes = [
 	{ path: '/profile', Component: Profile },
 	{ path: '/Tests.Counter', Component: TestsCounter },
 	{ path: '/goto/', Component: Goto, Exact: false },
+	{
+		path: '/github',
+		Component: getRedirComponent('https://github.com/0j3/?ref=nora.lgbt'),
+		Exact: false,
+	},
 ];
 
 const App = () => {
