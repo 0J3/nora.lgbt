@@ -43,6 +43,14 @@
 				a {
 					--linkClr: rgb(177, 177, 177);
 				}
+				.SocialButton {
+					top: 0;
+					position: relative;
+					transition: top 1s;
+					&:hover {
+						top: -10px;
+					}
+				}
 			}
 		}
 	}

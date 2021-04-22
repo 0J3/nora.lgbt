@@ -4,21 +4,35 @@ import Pfp from '../components/pfp';
 
 import './styles/profile.scss';
 
-import GitHub from '../GitHub.png';
+import GitHub from '../icons/GitHub.png';
+import Roblox from '../icons/Roblox.png';
+import Twitch from '../icons/Twitch.png';
 
 class ProfileLink extends React.Component<{
 	dest: string;
 	img: string;
 	alt?: string;
+	invertedIcon?: boolean;
+	transform?: string;
 }> {
 	render() {
 		return (
-			<Link href={this.props.dest} external>
+			<Link href={this.props.dest} external className="SocialButton">
 				<img
 					src={this.props.img}
 					alt={this.props.alt}
 					style={{
 						maxHeight: '1.5em',
+						...(this.props.invertedIcon
+							? {
+									filter: 'invert(1) hue-rotate(180deg)',
+							  }
+							: {}),
+						...(this.props.transform
+							? {
+									transform: this.props.transform,
+							  }
+							: {}),
 					}}
 				/>
 			</Link>
@@ -69,6 +83,15 @@ export default class ProfilePage extends React.Component {
 							<ProfileLink
 								dest="https://github.com/0j3/?ref=nora.lgbt/profile"
 								img={GitHub}
+							/>
+							<ProfileLink
+								dest="https://twitch.tv/0J3_0?ref=nora.lgbt/profile"
+								img={Twitch}
+								transform="scale(1.05)"
+							/>
+							<ProfileLink
+								dest="https://www.roblox.com/users/137413810/profile"
+								img={Roblox}
 							/>
 						</div>
 					</div>
