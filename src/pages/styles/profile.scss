@@ -2,14 +2,37 @@
 @use './Manrope.scss';
 
 $widthToggle: 1000px;
-@media screen and (min-width: $widthToggle,) {
+$widthToggle2: 600px;
+@media screen and (min-width: $widthToggle) {
 	.profile {
 		--width: 50vw;
+
+		.left {
+			.App-logo.profilePagePfpImg {
+				--height: 6.5rem;
+			}
+		}
 	}
 }
-@media screen and (max-width: $widthToggle) {
+@media screen and (max-width: $widthToggle) and (min-width: $widthToggle2) {
 	.profile {
 		--width: 80vw;
+
+		.left {
+			.App-logo.profilePagePfpImg {
+				--height: 5rem;
+			}
+		}
+	}
+}
+@media screen and (max-width: $widthToggle2) {
+	.profile {
+		--width: 90vw;
+		.left {
+			.App-logo.profilePagePfpImg {
+				--height: 3rem;
+			}
+		}
 	}
 }
 
@@ -39,7 +62,8 @@ $widthToggle: 1000px;
 
 		.top {
 			.profilePagePfpImg {
-				height: 6.5rem;
+				transition: height 2s, --height 2s;
+				height: var(--height);
 				border-radius: 100%;
 				border: solid #2a2b2c 3px;
 			}
