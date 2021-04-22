@@ -138,6 +138,10 @@ $widthToggle2: 600px;
 			}
 		}
 
+		.widget {
+			padding-left: 10px;
+		}
+
 		.sectionTitle {
 			@include t;
 		}
