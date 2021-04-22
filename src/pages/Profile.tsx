@@ -156,10 +156,39 @@ export default class ProfilePage extends React.Component {
 					</div>
 				</div>
 				<div className="right">
-					<p className="aboutText sectionTitle">About</p>
-					<p className="aboutValue">
-						I'm Nora, a <TimeSinceBDay /> year old Programmer.
-					</p>
+					<div className="widget">
+						<p className="aboutText sectionTitle">About</p>
+						<p className="aboutValue">
+							I'm Nora, a <TimeSinceBDay /> year old Programmer, Train
+							Enthusiast, Weeb, Furry, Game Developer and Web Designer.
+						</p>
+					</div>
+					<div
+						style={{
+							display: 'inline',
+						}}
+					>
+						<div
+							className="widget"
+							style={{
+								width: 'fit-content',
+								display: 'inline-block',
+							}}
+						>
+							<p className="genderText sectionTitle">Gender</p>
+							<p className="aboutValue">Demigirl/Demienby</p>
+						</div>
+					</div>
+					<div
+						className="widget"
+						style={{
+							width: 'fit-content',
+							display: 'inline-block',
+						}}
+					>
+						<p className="emailText sectionTitle">Email</p>
+						<p className="aboutValue">0J3@wafflepowered.com</p>
+					</div>
 				</div>
 			</div>
 		);
