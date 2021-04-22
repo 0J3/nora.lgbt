@@ -8,7 +8,7 @@ import Profile from './pages/Profile';
 import TestsCounter from './pages/Counter';
 import Goto from './pages/goto';
 
-const getRedirComponent = target => {
+const getRedirComponent = (target: string) => {
 	return () => {
 		document.location.replace(target);
 		return <div>Redirecting...</div>;
