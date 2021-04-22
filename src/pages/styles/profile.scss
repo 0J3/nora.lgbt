@@ -1,12 +1,25 @@
 @use './FontAwesome';
 @use './Manrope.scss';
 
+$widthToggle: 1000px;
+@media screen and (min-width: $widthToggle,) {
+	.profile {
+		--width: 50vw;
+	}
+}
+@media screen and (max-width: $widthToggle) {
+	.profile {
+		--width: 80vw;
+	}
+}
+
 .profile {
 	background: #23222b;
 
 	border-radius: 20px;
 
-	min-width: 50vw;
+	min-width: var(--width);
+	max-width: var(--width);
 	min-height: 50vh;
 
 	animation: in 1s;
@@ -62,6 +75,9 @@
 		border-bottom-right-radius: 20px;
 
 		padding-left: 20px;
+		padding-right: 20px;
+
+		text-align: left;
 
 		.aboutText {
 			font-size: 1.2em;

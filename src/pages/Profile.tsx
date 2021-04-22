@@ -13,8 +13,7 @@ if (!Date.now) {
 }
 
 interface t {
-	text?: string;
-	timerID?: any;
+	i?: number;
 }
 
 const timeSince = (when: number) => {
@@ -44,7 +43,9 @@ class TimeSinceBDay extends React.Component<{}, t> {
 
 	constructor(props: any) {
 		super(props);
-		this.state = { text: '', timerID: null };
+		this.state = {
+			i: 0,
+		};
 	}
 
 	getText() {
@@ -54,8 +55,9 @@ class TimeSinceBDay extends React.Component<{}, t> {
 	tick() {
 		this.text = this.getText();
 		this.setState({
-			text: this.text,
+			i: (this.state.i || 0) + 1,
 		});
+		this.forceUpdate();
 	}
 
 	componentDidMount() {
@@ -67,7 +69,7 @@ class TimeSinceBDay extends React.Component<{}, t> {
 	}
 
 	render() {
-		const v = <span>{this.state.text}</span>;
+		const v = <span>{this.text}</span>;
 
 		return v;
 	}
@@ -154,9 +156,9 @@ export default class ProfilePage extends React.Component {
 					</div>
 				</div>
 				<div className="right">
-					<p className="aboutText">About</p>
+					<p className="aboutText sectionTitle">About</p>
 					<p className="aboutValue">
-						I'm Nora, a <TimeSinceBDay /> year old
+						I'm Nora, a <TimeSinceBDay /> year old Programmer.
 					</p>
 				</div>
 			</div>
