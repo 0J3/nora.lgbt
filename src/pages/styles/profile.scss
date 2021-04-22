@@ -1,13 +1,54 @@
 .profile {
 	background: #23222b;
-	padding: 20px 20px;
+
 	border-radius: 20px;
 
-	animation: in 2s;
-	.profilePagePfpImg {
-		height: 6.5rem;
-		border-radius: 100%;
-		border: solid #2a2b2c 3px;
+	min-width: 50vw;
+	min-height: 50vh;
+
+	animation: in 1s;
+
+	display: flex;
+	.left,
+	.bottom {
+		padding: 20px 20px;
+		display: block;
+	}
+	.left {
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+
+		background: linear-gradient(20deg, rgb(98, 0, 255), rgb(0, 102, 255));
+
+		.top {
+			.profilePagePfpImg {
+				height: 6.5rem;
+				border-radius: 100%;
+				border: solid #2a2b2c 3px;
+			}
+		}
+		.middle {
+			.username {
+				font-family: Discord;
+				// .user {}
+				.tag {
+					font-size: 75%;
+					color: rgb(159, 166, 178);
+				}
+			}
+		}
+		.bottom {
+			.links {
+				a {
+					--linkClr: rgb(177, 177, 177);
+				}
+			}
+		}
+	}
+	.right {
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
 	}
 }
 
@@ -16,7 +57,7 @@
 		transform: scale(0);
 	}
 	75% {
-		transform: scale(1.5);
+		transform: scale(1.25);
 	}
 	100% {
 		transform: scale(1);
