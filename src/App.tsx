@@ -10,12 +10,21 @@ import Goto from './pages/goto';
 
 const routes = [
 	{ path: '/', Component: Index, Exact: true },
-	{ path: '/Profile', Component: Profile },
+	{ path: '/bio', Component: Profile },
+	{ path: '/about', Component: Profile },
+	{ path: '/profile', Component: Profile },
 	{ path: '/Tests.Counter', Component: TestsCounter },
 	{ path: '/goto/', Component: Goto, Exact: false },
 ];
 
 const App = () => {
+	routes.forEach(({ path, Component, Exact }) => {
+		if (
+			document.location.pathname === path ||
+			(document.location.pathname.startsWith(path) && Exact === false)
+		) {
+		}
+	});
 	return (
 		<Router>
 			{/* <Switch> */}

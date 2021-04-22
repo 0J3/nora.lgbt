@@ -27,6 +27,13 @@ class ProfileLink extends React.Component<{
 }
 
 export default class ProfilePage extends React.Component {
+	headRender() {
+		return (
+			<div>
+				<meta name="description" content="0J3#0001's profile" />
+			</div>
+		);
+	}
 	render() {
 		return (
 			<div className="profile">
