@@ -178,10 +178,10 @@ export default class ProfilePage extends React.Component {
 								img={Twitch}
 								transform="scale(1.05)"
 							/>
-							<ProfileLink
+							{/* <ProfileLink
 								dest="https://www.roblox.com/users/137413810/profile"
 								img={Roblox}
-							/>
+							/> */}
 						</div>
 					</div>
 				</div>
