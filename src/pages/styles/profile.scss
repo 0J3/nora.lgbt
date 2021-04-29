@@ -138,8 +138,12 @@ $widthToggle2: 600px;
 			}
 		}
 
-		.widget:nth-child(1) {
-			padding-right: 10%;
+		.widget:nth-child(2),
+		.widget:nth-child(3) {
+			padding-left: 5%;
+		}
+		.widget:nth-child(3) {
+			padding-right: 5%;
 		}
 
 		.sectionTitle {
@@ -156,6 +160,10 @@ $widthToggle2: 600px;
 		}
 		.emailText::before {
 			content: '\f0e0  ​';
+			color: #a200ff;
+		}
+		.occText::before {
+			content: '\f0b1  ';
 			color: #a200ff;
 		}
 	}

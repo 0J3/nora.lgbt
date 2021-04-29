@@ -1,0 +1,13 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "start dev",
+			"detail": "Start the development build of React(-redux)"
+		}
+	]
+}

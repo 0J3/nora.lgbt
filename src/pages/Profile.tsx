@@ -12,6 +12,19 @@ if (!Date.now) {
 	Date.now = () => new Date().getTime();
 }
 
+class Small extends React.Component {
+	render() {
+		return (
+			<p
+				style={{
+					fontSize: '0.5em',
+				}}
+			>
+				{this.props.children}
+			</p>
+		);
+	}
+}
 interface t {
 	i?: number;
 }
@@ -37,7 +50,12 @@ const getYearsSince = (epoch: number) => {
 	days = days + date.getUTCSeconds() / 60 / 60 / 60;
 	return days / 365;
 };
-class TimeSinceBDay extends React.Component<{}, t> {
+class TimeSince extends React.Component<
+	{
+		time: number;
+	},
+	t
+> {
 	text: string = '';
 	timer: any;
 
@@ -50,7 +68,7 @@ class TimeSinceBDay extends React.Component<{}, t> {
 
 	getText() {
 		const x = 1000000000;
-		return (Math.floor(getYearsSince(1196121600) * x) / x).toString();
+		return (Math.floor(getYearsSince(this.props.time) * x) / x).toString();
 	}
 	tick() {
 		this.text = this.getText();
@@ -72,6 +90,18 @@ class TimeSinceBDay extends React.Component<{}, t> {
 		const v = <span>{this.text}</span>;
 
 		return v;
+	}
+}
+
+class TimeSinceBDay extends React.Component<{}> {
+	render() {
+		return <TimeSince time={1196121600} />;
+	}
+}
+class Experience extends React.Component<{}> {
+	render() {
+		// Timestamp of the creation of the first GIT repository of mine
+		return <TimeSince time={1328367963} />;
 	}
 }
 
@@ -161,7 +191,7 @@ export default class ProfilePage extends React.Component {
 						<p className="aboutValue">
 							I'm Nora, a <TimeSinceBDay /> year old Programmer/Computer
 							Scientist, Train Enthusiast, Weeb, Furry, Game Developer and Web
-							Designer.
+							Designer, with <Experience /> years* of experience.
 						</p>
 					</div>
 					<div
@@ -190,6 +220,17 @@ export default class ProfilePage extends React.Component {
 						<p className="emailText sectionTitle">Email</p>
 						<p className="aboutValue">0J3@wafflepowered.com</p>
 					</div>
+					<div
+						className="widget"
+						style={{
+							width: 'fit-content',
+							display: 'inline-block',
+						}}
+					>
+						<p className="occText sectionTitle">Occupation</p>
+						<p className="aboutValue">Video Game Developer</p>
+					</div>
+					<Small>*Time since creation of my first git repository.</Small>
 				</div>
 			</div>
 		);

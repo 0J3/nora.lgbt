@@ -16,3 +16,11 @@
 		animation: App-logo-float infinite 3s ease-in-out;
 	}
 }
+
+// Darkreader fix
+html[data-darkreader-mode],
+html[data-darkreader-scheme] {
+	.App-logo {
+		border-color: #2a2b2c !important;
+	}
+}
