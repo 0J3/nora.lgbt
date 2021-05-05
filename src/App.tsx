@@ -4,6 +4,7 @@ import { CSSTransition } from 'react-transition-group';
 import './App.scss';
 
 import Index from './pages/Index';
+import Soon from './pages/Soon';
 import Profile from './pages/Profile';
 import TestsCounter from './pages/Counter';
 import Goto from './pages/goto';
@@ -27,6 +28,7 @@ const routes = [
 	{ path: '/goto/', Component: Goto, Exact: false },
 	{ path: '/github', Component: ghComponent, Exact: false },
 	{ path: '/gh', Component: ghComponent, Exact: false },
+	{ path: '/soon', Component: Soon, Exact: true },
 	{
 		path: '/source',
 		Component: grc('https://github.com/0j3/nora.lgbt/?ref=nora.lgbt'),

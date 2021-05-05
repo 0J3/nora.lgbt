@@ -7,7 +7,7 @@ import styles from './styles/Index.module.scss';
 import './styles/Index.scss';
 import './styles/Logo.scss';
 
-export default class e404 extends React.Component {
+export default class Soon extends React.Component {
 	render() {
 		return (
 			<div>
