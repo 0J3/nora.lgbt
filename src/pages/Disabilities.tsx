@@ -5,7 +5,6 @@ import Pfp from '../components/pfp';
 import './styles/profile.scss';
 
 // eslint-disable-next-line
-import Roblox from '../icons/Roblox.png';
 import GitHub from '../icons/GitHub.png';
 import Twitch from '../icons/Twitch.png';
 
@@ -58,7 +57,7 @@ class ProfileLink extends React.Component<{
 		);
 	}
 }
-export default class ProfilePage extends React.Component {
+export default class Disabilities extends React.Component {
 	render() {
 		return (
 			<div className="profile" id="profileDiv">

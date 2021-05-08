@@ -8,7 +8,7 @@ import Soon from './pages/Soon';
 import Profile from './pages/Profile';
 import TestsCounter from './pages/Counter';
 import Goto from './pages/goto';
-import Disorders from './pages/Disorders';
+import Disabilities from './pages/Disabilities';
 
 const getRedirComponent = (target: string) => {
 	return () => {
@@ -33,7 +33,11 @@ const routes = [
 	{ path: '/github', Component: ghComponent, Exact: false },
 	{ path: '/gh', Component: ghComponent, Exact: false },
 	{ path: '/soon', Component: Soon, Exact: true },
-	{ path: '/wip/disorders.4958709237645', Component: Disorders, Exact: true },
+	{
+		path: '/wip/disabilities.4958709237645',
+		Component: Disabilities,
+		Exact: true,
+	},
 	{
 		path: '/source',
 		Component: grc('https://github.com/0j3/nora.lgbt/?ref=nora.lgbt'),
