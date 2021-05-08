@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Pfp from '../components/pfp';
-import Link from '../components/Link';
 
 import styles from './styles/Index.module.scss';
 import './styles/Index.scss';

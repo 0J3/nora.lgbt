@@ -4,8 +4,9 @@ import Pfp from '../components/pfp';
 
 import './styles/profile.scss';
 
-import GitHub from '../icons/GitHub.png';
+// eslint-disable-next-line
 import Roblox from '../icons/Roblox.png';
+import GitHub from '../icons/GitHub.png';
 import Twitch from '../icons/Twitch.png';
 
 if (!Date.now) {
