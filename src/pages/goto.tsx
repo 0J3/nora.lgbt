@@ -58,7 +58,7 @@ export default class Goto extends React.Component {
 			);
 		if (
 			!(
-				t.toLowerCase().startsWith('https://') &&
+				t.toLowerCase().startsWith('https://') ||
 				t.toLowerCase().startsWith('http://')
 			)
 		)
