@@ -3,6 +3,7 @@ import Link from '../components/Link';
 import Pfp from '../components/pfp';
 
 import './styles/profile.scss';
+import './styles/disabilities.scss';
 
 // eslint-disable-next-line
 import GitHub from '../icons/GitHub.png';
