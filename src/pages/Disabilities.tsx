@@ -133,6 +133,7 @@ export default class Disabilities extends React.Component {
 							<li>Dyslexia</li>
 							<li>Major Depressive Disorder (Recurrent)</li>
 							<li>Autism</li>
+							<li>Photosensitive Epilepsy</li>
 							<li>ADHD</li>
 							<li>Colourblindness (Red-Green)</li>
 						</ol>
