@@ -207,8 +207,8 @@ export default class ProfilePage extends React.Component {
 								display: 'inline-block',
 							}}
 						>
-							<p className="genderText sectionTitle">Gender</p>
-							<p className="aboutValue">Demigirl/Demienby</p>
+							<p className="genderText sectionTitle">Pronouns</p>
+							<p className="aboutValue">They/Them</p>
 						</div>
 					</div>
 					<div
