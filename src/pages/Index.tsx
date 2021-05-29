@@ -14,7 +14,7 @@ export default class index extends React.Component {
 				<Pfp />
 				{/* <Counter /> */}
 				<p className={`ComingSoon ${styles.ComingSoonText}`}>Coming Soon.</p>
-				<Link to="/profile">Profile</Link>
+				<Link to="/bio">About me</Link>
 				<span></span>
 			</div>
 		);
