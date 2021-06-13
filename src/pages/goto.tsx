@@ -28,12 +28,7 @@ export default class Goto extends React.Component {
 			);
 		if (t.toLowerCase().startsWith('gh/')) {
 			t=t.replace('gh/', '')
-			const v = t.split('/')
-			if (v[1]) {
-				t=`https://github.com/${v.join('/')}`
-			} else {
-				t=`https://github.com/0J3/${v.join('/')}`
-			}
+			t=`https://github.com/${t}`
 		}
 		if (t.toLowerCase().startsWith('ghp/')) {
 			const rawt = t
