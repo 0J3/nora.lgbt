@@ -40,6 +40,16 @@ export default class Goto extends React.Component {
 			const v = t.split('/')
 			if (v[0]) {
 				t=`https://${v.shift()}.github.io/${v.join('/')}`
+			} else {
+				return (
+					<div>
+						⚠️ Invalid URL detected ⚠️
+						<br />
+						This URL seems invalid
+						<br />
+						If you wish to proceed anyway, click this link: <a href={t}>{t}</a>
+					</div>
+				);
 			}
 		}
 		
