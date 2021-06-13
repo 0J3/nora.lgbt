@@ -26,12 +26,22 @@ export default class Goto extends React.Component {
 				`${document.location.protocol}//${document.location.host}/redirect/`,
 				''
 			);
-		t = t.toLowerCase().startsWith('gh/')
-			? t.replace('gh/', 'https://github.com/')
-			: t;
-		t = t.toLowerCase().startsWith('ghp/')
-			? t.replace('ghp/', 'https://github.com/')
-			: t;
+		if (t.toLowerCase().startsWith('gh/')) {
+			t=t.replace('gh/', '')
+			const v = t.split('/')
+			if (v[1]) {
+				t=`https://github.com/${v.join('/')}`
+			} else {
+				t=`https://github.com/0J3/${v.join('/')}`
+			}
+		}
+		if (t.toLowerCase().startsWith('ghp/')) {
+			t=t.replace('ghp/', '')
+			const v = t.split('/')
+			if (v[0]) {
+				t=`https://${v.shift()}.github.io/${v.join('/')}`
+			}
+		}
 		
 		t = t.toLowerCase().startsWith('yt/')
 			? t.split('?').join('&').replace('yt/', 'https://youtu.be/')
