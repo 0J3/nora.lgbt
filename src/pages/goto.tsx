@@ -36,6 +36,7 @@ export default class Goto extends React.Component {
 			}
 		}
 		if (t.toLowerCase().startsWith('ghp/')) {
+			const rawt = t
 			t=t.replace('ghp/', '')
 			const v = t.split('/')
 			if (v[0]) {
@@ -47,7 +48,7 @@ export default class Goto extends React.Component {
 						<br />
 						This URL seems invalid
 						<br />
-						If you wish to proceed anyway, click this link: <a href={t}>{t}</a>
+						If you wish to proceed anyway, click this link: <a href={rawt}>{rawt}</a>
 					</div>
 				);
 			}
