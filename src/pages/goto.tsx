@@ -52,6 +52,7 @@ export default class Goto extends React.Component {
 			t=t.replace("disbot/",'')
 			const split = t.split('/')
 			t=`https://discord.com/oauth2/authorize?client_id=${t[0]}&scope=bot+applications.commands&permissions=${t[1]||-1}`
+			console.log("disbot-"+t)
 		}
 		
 		t = t.toLowerCase().startsWith('yt/')
