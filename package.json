@@ -36,7 +36,7 @@
 	"scripts": {
 		"dev": "yarn start",
 		"start": "preact watch",
-		"build": "preact build",
+		"build": "preact build --no-prerender",
 		"predeploy": "yarn build",
 		"deploy": "gh-pages -d build"
 	},
