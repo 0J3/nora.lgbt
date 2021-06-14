@@ -46,13 +46,13 @@ const routes = [
 ];
 
 const App = () => {
-	routes.forEach(({ path, Component, Exact }) => {
-		if (
-			document.location.pathname === path ||
-			(document.location.pathname.startsWith(path) && Exact === false)
-		) {
-		}
-	});
+	// routes.forEach(({ path, Component, Exact }) => {
+	// 	if (
+	// 		document.location.pathname === path ||
+	// 		(document.location.pathname.startsWith(path) && Exact === false)
+	// 	) {
+	// 	}
+	// });
 	return (
 		<Router>
 			{/* <Switch> */}
