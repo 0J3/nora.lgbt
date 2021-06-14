@@ -8,14 +8,26 @@
 		<!-- <meta name="description" content="0J3's personal site" /> -->
 		<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-		<title>Nora</title>
-		<script src="https://ywb9743gr9nm.statuspage.io/embed/script.js"></script>
+
+		<!-- Meta Tags -->
+		<meta property="og:title" content="{{META:TITLE}}" />
+		<meta property="og:description" content="{{META:DESCRIPTION}}" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="{{META:URL}}" />
+		<meta property="og:image" content="{{META:IMAGE}}" />
+
+		<title>{{META:TITLE}}</title>
+		<!-- Add prefix -->
 		<script>
-			document.getElementsByTagName('title')[0].innerText = '🏳️‍🌈 Nora';
+			document.title = '🏳️‍🌈 Nora | ' + document.title;
 		</script>
 	</head>
 	<body>
+		<!-- NoScript -->
 		<noscript>You need to enable JavaScript to run this app uwu.</noscript>
+		<!-- Preact Root -->
 		<div id="root"></div>
+		<!-- Statuspage -->
+		<script src="https://ywb9743gr9nm.statuspage.io/embed/script.js"></script>
 	</body>
 </html>
