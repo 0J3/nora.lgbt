@@ -48,6 +48,7 @@ export default class Goto extends React.Component {
 				);
 			}
 		}
+		console.log(t)
 		if (t.toLowerCase().startsWith('disbot/')) {
 			t=t.replace("disbot/",'')
 			const split = t.split('/')
