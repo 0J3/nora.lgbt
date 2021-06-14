@@ -48,6 +48,11 @@ export default class Goto extends React.Component {
 				);
 			}
 		}
+		if (t.toLowerCase().startsWith('disbot/')) {
+			t=t.replace("disbot/",'')
+			const split = t.split('/')
+			t=`https://discord.com/oauth2/authorize?client_id=${t[0]}&scope=bot+applications.commands&permissions=${t[1]||-1}`
+		}
 		
 		t = t.toLowerCase().startsWith('yt/')
 			? t.split('?').join('&').replace('yt/', 'https://youtu.be/')
