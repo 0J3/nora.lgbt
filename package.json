@@ -7,10 +7,12 @@
 		"@testing-library/jest-dom": "^4.2.4",
 		"@testing-library/react": "^9.3.2",
 		"@testing-library/user-event": "^7.1.2",
+		"@types/react": "^17.0.3",
 		"customize-cra": "^1.0.0",
 		"gh-pages": "^3.1.0",
 		"preact": "^10.5.13",
 		"preact-cli": "^3.2.2",
+		"preact-router": "^3.2.1",
 		"react-app-rewired": "^2.1.8",
 		"react-bootstrap": "^1.5.2",
 		"react-redux": "^7.2.0",
@@ -19,12 +21,12 @@
 		"react-scripts": "4.0.3",
 		"react-transition-group": "^4.4.1",
 		"sass": "^1.32.8",
+		"tiny-invariant": "https://github.com/0J3/tiny-invariant.git",
 		"typescript": "~4.1.5"
 	},
 	"devDependencies": {
 		"@types/jest": "^24.0.0",
 		"@types/node": "^12.0.0",
-		"@types/react": "^17.0.3",
 		"@types/react-bootstrap": "^0.32.25",
 		"@types/react-dom": "^16.9.0",
 		"@types/react-redux": "^7.1.7",
@@ -36,7 +38,9 @@
 	"scripts": {
 		"dev": "yarn start",
 		"start": "preact watch",
-		"build": "preact build --no-prerender",
+		"build": "yarn build-cra",
+		"build-prcli": "preact build",
+		"build-cra": "react-app-rewired build",
 		"predeploy": "yarn build",
 		"deploy": "gh-pages -d build"
 	},

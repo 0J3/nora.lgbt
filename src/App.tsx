@@ -1,4 +1,5 @@
 import React from 'react';
+import { h } from 'preact';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import './App.scss';

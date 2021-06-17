@@ -1,11 +1,25 @@
 import React from 'react';
+import { h } from 'preact';
 
 const valURL = (u: string) => {
 	// eslint-disable-next-line
-	const rg = /^(http|https):\/\/(([a-zA-Z0-9$\-_.+!*'(),;:&=]|%[0-9a-fA-F]{2})+@)?(((25[0-5]|2[0-4][0-9]|[0-1][0-9][0-9]|[1-9][0-9]|[0-9])(\.(25[0-5]|2[0-4][0-9]|[0-1][0-9][0-9]|[1-9][0-9]|[0-9])){3})|localhost|([a-zA-Z0-9\-\u00C0-\u017F]+\.)+([a-zA-Z]{1,}))(:[0-9]+)?(\/(([a-zA-Z0-9$\-_.+!*'(),;:@&=]|%[0-9a-fA-F]{2})*(\/([a-zA-Z0-9$\-_.+!*'(),;:@&=]|%[0-9a-fA-F]{2})*)*)?(\?([a-zA-Z0-9$\-_.+!*'(),;:@&=\/?]|%[0-9a-fA-F]{2})*)?(\#([a-zA-Z0-9$\-_.+!*'(),;:@&=\/?]|%[0-9a-fA-F]{2})*)?)?$/;
+	const rg =
+		/^(http|https):\/\/(([a-zA-Z0-9$\-_.+!*'(),;:&=]|%[0-9a-fA-F]{2})+@)?(((25[0-5]|2[0-4][0-9]|[0-1][0-9][0-9]|[1-9][0-9]|[0-9])(\.(25[0-5]|2[0-4][0-9]|[0-1][0-9][0-9]|[1-9][0-9]|[0-9])){3})|localhost|([a-zA-Z0-9\-\u00C0-\u017F]+\.)+([a-zA-Z]{1,}))(:[0-9]+)?(\/(([a-zA-Z0-9$\-_.+!*'(),;:@&=]|%[0-9a-fA-F]{2})*(\/([a-zA-Z0-9$\-_.+!*'(),;:@&=]|%[0-9a-fA-F]{2})*)*)?(\?([a-zA-Z0-9$\-_.+!*'(),;:@&=\/?]|%[0-9a-fA-F]{2})*)?(\#([a-zA-Z0-9$\-_.+!*'(),;:@&=\/?]|%[0-9a-fA-F]{2})*)?)?$/;
 
 	return rg.test(u);
 };
+
+export class InvalidURL {
+	static create(link: string) {
+		<div>
+			⚠️ Invalid URL detected ⚠️
+			<br />
+			This URL seems invalid
+			<br />
+			If you wish to proceed anyway, click this link: <a href={link}>{link}</a>
+		</div>;
+	}
+}
 
 export default class Goto extends React.Component {
 	render() {
@@ -27,35 +41,29 @@ export default class Goto extends React.Component {
 				''
 			);
 		if (t.toLowerCase().startsWith('gh/')) {
-			t=t.replace('gh/', '')
-			t=`https://github.com/${t}`
+			t = t.replace('gh/', '');
+			t = `https://github.com/${t}`;
 		}
 		if (t.toLowerCase().startsWith('ghp/')) {
-			const rawt = t
-			t=t.replace('ghp/', '')
-			const v = t.split('/')
+			const rawt = t;
+			t = t.replace('ghp/', '');
+			const v = t.split('/');
 			if (v[0]) {
-				t=`https://${v.shift()}.github.io/${v.join('/')}`
+				t = `https://${v.shift()}.github.io/${v.join('/')}`;
 			} else {
-				return (
-					<div>
-						⚠️ Invalid URL detected ⚠️
-						<br />
-						This URL seems invalid
-						<br />
-						If you wish to proceed anyway, click this link: <a href={rawt}>{rawt}</a>
-					</div>
-				);
+				return InvalidURL.create(rawt);
 			}
 		}
-		console.log(t)
+		console.log(t);
 		if (t.toLowerCase().startsWith('disbot/')) {
-			t=t.replace("disbot/",'')
-			const split = t.split('/')
-			t=`https://discord.com/oauth2/authorize?client_id=${t[0]}&scope=bot+applications.commands&permissions=${t[1]||-1}`
-			console.log("disbot-"+t)
+			t = t.replace('disbot/', '');
+			const split = t.split('/');
+			t = `https://discord.com/oauth2/authorize?client_id=${
+				split[0]
+			}&scope=bot+applications.commands&permissions=${split[1] || -1}`;
+			console.log('disbot-' + t);
 		}
-		
+
 		t = t.toLowerCase().startsWith('yt/')
 			? t.split('?').join('&').replace('yt/', 'https://youtu.be/')
 			: t;
@@ -95,15 +103,7 @@ export default class Goto extends React.Component {
 			t = 'https://' + t;
 
 		if (!valURL(t)) {
-			return (
-				<div>
-					⚠️ Invalid URL detected ⚠️
-					<br />
-					This URL seems invalid
-					<br />
-					If you wish to proceed anyway, click this link: <a href={t}>{t}</a>
-				</div>
-			);
+			return InvalidURL.create(t);
 		}
 		document.location.replace(t);
 		return <div>Redirecting...</div>;

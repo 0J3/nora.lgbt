@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Nav } from 'react-bootstrap';
+import { h } from 'preact';
 
 export default class Link extends React.Component<{
 	href?: string;

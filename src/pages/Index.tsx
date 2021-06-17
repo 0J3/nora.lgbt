@@ -1,4 +1,5 @@
 import React from 'react';
+import { h } from 'preact';
 
 import Pfp from '../components/pfp';
 import Link from '../components/Link';
