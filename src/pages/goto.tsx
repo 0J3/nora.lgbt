@@ -1,4 +1,7 @@
-import { h, Component, ComponentChild } from 'preact';
+import { h, Component } from 'preact';
+import React from 'react';
+
+if (!React) void 0; // disable warn
 
 const valURL = (u: string) => {
 	// eslint-disable-next-line
