@@ -1,5 +1,4 @@
-import React from 'react';
-import { h } from 'preact';
+import { h, Component, ComponentChild } from 'preact';
 
 const valURL = (u: string) => {
 	// eslint-disable-next-line
@@ -11,17 +10,20 @@ const valURL = (u: string) => {
 
 export class InvalidURL {
 	static create(link: string) {
-		<div>
-			⚠️ Invalid URL detected ⚠️
-			<br />
-			This URL seems invalid
-			<br />
-			If you wish to proceed anyway, click this link: <a href={link}>{link}</a>
-		</div>;
+		return (
+			<div>
+				⚠️ Invalid URL detected ⚠️
+				<br />
+				This URL seems invalid
+				<br />
+				If you wish to proceed anyway, click this link:{' '}
+				<a href={link}>{link}</a>
+			</div>
+		);
 	}
 }
 
-export default class Goto extends React.Component {
+export default class Goto extends Component {
 	render() {
 		let t = document.location.href
 			.replace(

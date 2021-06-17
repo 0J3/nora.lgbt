@@ -1,5 +1,5 @@
 import React from 'react';
-import { h } from 'preact';
+import { h, Component } from 'preact';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import './App.scss';
@@ -11,7 +11,9 @@ import TestsCounter from './pages/Counter';
 import Goto from './pages/goto';
 import Disabilities from './pages/Disabilities';
 
-const getRedirComponent = (target: string) => {
+const getRedirComponent: (target: string) => () => h.JSX.Element | Component = (
+	target: string
+) => {
 	return () => {
 		document.location.replace(target);
 		return <div>Redirecting...</div>;
@@ -21,7 +23,13 @@ const grc = getRedirComponent;
 
 const ghComponent = getRedirComponent('https://github.com/0j3/?ref=nora.lgbt');
 
-const routes = [
+interface _Route {
+	path: string;
+	Component: typeof Component | typeof Goto | typeof ghComponent;
+	Exact?: boolean;
+}
+
+const routes: _Route[] = [
 	{ path: '/', Component: Index, Exact: true },
 	{ path: '/bio', Component: Profile },
 	{ path: '/about', Component: Profile },
