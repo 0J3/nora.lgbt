@@ -210,12 +210,17 @@ class ProfilePageContent extends Component<
               display: 'inline-block',
             }}
           >
-            <p className={getStyle('emailText sectionTitle')}>Email</p>
+            <p className={getStyle('discordText sectionTitle')}>
+              &nbsp;Discord
+            </p>
             <p className={getStyle('aboutValue')}>
-              <a href='mailto:0J3@wafflepowered.com'>
+              <Link
+                href='https://discord.com/users/596425713347723269'
+                target='_blank'
+              >
                 {this.state.stage >= 3 ? (
                   <Typewriter
-                    text='0J3@wafflepowered.com'
+                    text='0J3#0001'
                     interval={100}
                     cursorFlashes={3}
                     done={() => {
@@ -228,7 +233,7 @@ class ProfilePageContent extends Component<
                 ) : (
                   ''
                 )}
-              </a>
+              </Link>
               &nbsp;
             </p>
           </div>
