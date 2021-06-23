@@ -1,0 +1,93 @@
+$padding: 10px;
+$border: 16px;
+
+header {
+  top: -100px !important;
+}
+
+body.xsswarning {
+  border: rgb(255, 255, 0) $border solid;
+  justify-content: normal;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  & > div:first-child {
+    width: calc(100vw - #{$border} * 3) !important;
+    height: calc(100vh - #{$border} * 3) !important;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .xss h1 {
+    background-image: none !important;
+  }
+}
+
+.invalidurl,
+.xss {
+  font-size: 15px;
+  text-align: left !important;
+  font-weight: normal;
+  max-width: 75vw;
+  h1 {
+    font-size: 2.2em;
+    font-weight: lighter;
+    min-height: 52.8px;
+  }
+  .shortdescription {
+    margin: 0 0;
+    margin-top: 15px;
+  }
+  .padding {
+    margin-top: 30px;
+  }
+  .longDesc {
+    margin: 0 0;
+    ul {
+      margin: 30px 15px;
+    }
+  }
+}
+.xss h1 {
+  // padding-right: 75.9px;
+  background-image: url(./warning.png);
+  background-position: left 0;
+  background-repeat: no-repeat;
+  background-size: 1.6em;
+  margin-inline-start: -2.3em;
+  padding-inline-start: 2.3em;
+  -moz-context-properties: fill;
+  fill: currentColor;
+  // background-size: 1.6em;
+  // background-repeat: no-repeat;
+}
+
+.warning,
+.xss {
+  padding: $padding $padding;
+  text-align: left !important;
+}
+
+.content {
+  text-align: center;
+  width: max-content;
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  &:not(.invalidurl):not(.xss) {
+    transform: translate(-50%, -50%) scale(150%);
+  }
+  &.invalidurl,
+  &.xss {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.primary {
+  float: right;
+}
+.secondary {
+  margin-right: 0;
+  float: right;
+}

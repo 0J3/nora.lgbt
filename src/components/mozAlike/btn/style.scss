@@ -1,0 +1,19 @@
+@use "../colours" as c;
+
+.mozBtn {
+  background: c.$mozPrimary;
+  color: c.$mozPrimaryButtonText;
+  padding: 0 1.5em;
+  appearance: none;
+  min-height: 32px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  text-decoration: none;
+  margin: 4px 8px;
+  margin-top: 4px;
+  font-size: 1em;
+}
+.mozBtn.Secondary {
+  background: c.$mozSecondary;
+  color: c.$mozSecondaryButtonText;
+}
