@@ -24,19 +24,54 @@
   }
 }
 
+.pageContents::after {
+  white-space: pre;
+  color: #fff;
+  display: block;
+  width: 95vw !important;
+  text-align: center;
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  word-break: break-all;
+}
+.pageContents::before {
+  content: '\A';
+  white-space: pre;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+}
 @media screen and (max-width: vars.$unusableWidth) {
   .pageContents::before {
-    content: 'Your screen is too small to display this page';
-    color: #fff;
-    display: block;
-    width: 75vw;
-    text-align: center;
-    position: fixed;
-    left: 50vw;
-    top: 50vh;
-    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  .pageContents::after {
+    content: 'Your screen is too small to display this page' !important;
   }
   .pageContents * {
+    display: none;
+  }
+}
+[data-darkreader-scheme] {
+  .pageContents::before {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .pageContents::after {
+    content: 'Dark reader breaks this page - This page is dark by default\APlease disable dark reader for this page';
+  }
+  .pageContents *,
+  header {
     display: none;
   }
 }

@@ -13,7 +13,7 @@
     width: 100vw;
     border: 0;
     .sectionContents {
-      max-width: calc(80vw);
+      max-width: 80vw;
       min-height: 300px;
       height: auto;
       transition: width 1s;
@@ -36,6 +36,16 @@
         transition: all 1s;
       }
       background: #751775;
+    }
+    // ANCHOR Projects
+    &.projectsSection {
+      .sectionContents {
+        width: 80vw;
+        min-height: max-content;
+        transition: all 1s;
+      }
+      height: max-content;
+      background: #10004b;
     }
     // !SECTION
   }

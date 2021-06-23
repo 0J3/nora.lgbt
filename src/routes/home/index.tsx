@@ -33,7 +33,7 @@ export default class index extends Component<
           text={
             ' year old C#/TS Developer, Weeb, and otherwise dumbass. Here are some links:'
           }
-          interval={75}
+          interval={25}
           cursorFlashes={2}
           done={() => {
             if (this.state.s >= 1) return;

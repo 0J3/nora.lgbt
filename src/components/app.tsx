@@ -56,7 +56,11 @@ const App: FunctionalComponent = () => {
           {/* ROUTE /profile */}
           <Route path='/profile' component={Profile} />
           {/* ROUTE /projects */}
-          <Route path='/projects' component={projects} />
+          <Route
+            path='/projects'
+            component={Goto}
+            destination='/about#Projects'
+          />
           {/* ROUTE 404 */}
           <NotFoundPage default />
           {/* !SECTION */}
