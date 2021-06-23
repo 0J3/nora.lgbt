@@ -46,7 +46,7 @@ export default class Typewriter extends Component<
           : 0),
     });
     if (
-      this.state.runs >= (this.props.cursorFlashes || 100) &&
+      this.state.runs >= (this.props.cursorFlashes || 0) &&
       this.state.textLengthLeft <= 0
     ) {
       this.clearTimer();

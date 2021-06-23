@@ -9,6 +9,8 @@ const Class = getGSF(style);
 import projects from '../projects';
 
 const typeinterval = 12; //25
+const cursor = 0;
+
 export default class About extends Component {
   render() {
     return (
@@ -27,27 +29,27 @@ export default class About extends Component {
                 `Software developer who primarily writes their code in C#, Lua, and Typescript. A significant portion of my code can be found on my`
               }
               interval={typeinterval}
-              cursorFlashes={1}
+              cursorFlashes={cursor}
               doneEl={
                 <>
                   <MozLink href='/gh'>
                     <Typewriter
                       text='Github'
                       interval={typeinterval}
-                      cursorFlashes={1}
+                      cursorFlashes={cursor}
                     />
                   </MozLink>
                   <Typewriter
                     text='Including, but not limited to,'
                     interval={typeinterval}
-                    cursorFlashes={1}
+                    cursorFlashes={cursor}
                     doneEl={
                       <>
                         <MozLink href='/source'>
                           <Typewriter
                             text='This Page'
                             interval={typeinterval}
-                            cursorFlashes={1}
+                            cursorFlashes={cursor}
                           />
                         </MozLink>
                         <Typewriter
