@@ -6,7 +6,7 @@ import style from './styles.scss';
 import getGSF from '../../getStyle';
 import TimeSince from '../../components/timeSince';
 import Typewriter from '../../components/typewriter';
-import Link from '../../components/link';
+import Link from '../../components/mozAlike/link';
 const Class = getGSF(style);
 
 // const Home: FunctionalComponent = () => {
