@@ -1,19 +1,13 @@
-# Nora.lgbt
+# [nora.lgbt](https://nora.lgbt?ref=ghreadme)
 
-## CLI Commands
-*   `npm install`: Installs dependencies
+0J3's personal website or something
 
-*   `npm run dev`: Run a development, HMR server
+## Commands
 
-*   `npm run serve`: Run a production-like server
+- `yarn`: Installs dependencies
 
-*   `npm run build`: Production-ready build
+- `yarn dev`: Run a development, HMR server
 
-*   `npm run lint`: Pass TypeScript files using ESLint
+- `yarn serve`: Run a production-like server
 
-*   `npm run test`: Run Jest and Enzyme with
-    [`enzyme-adapter-preact-pure`](https://github.com/preactjs/enzyme-adapter-preact-pure) for
-    your tests
-
-
-For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
+- `yarn build`: Production-ready build

@@ -9,12 +9,22 @@ import Goto from '../routes/goto';
 
 import Header from './header';
 import styles from './app.scss';
+import projects from '../routes/projects';
 
 const App: FunctionalComponent = () => {
   return (
-    <div id='preact_root'>
+    <div
+      id='preact_root'
+      class={
+        typeof window !== 'undefined'
+          ? `route_${document.location.pathname
+              .replace('/', '')
+              .replace(/\//g, '_')}`
+          : ''
+      }
+    >
       <Header />
-      <div class={`s_pageContents ${styles.pageContents}`}>
+      <div class={`s_pageContents ${styles.pageContents}`} id='pageContents'>
         <Router>
           {/* SECTION Routes */}
           {/* ROUTE / */}
@@ -31,6 +41,12 @@ const App: FunctionalComponent = () => {
             component={Goto}
             destination='https://github.com/0J3/'
           />
+          {/* ROUTE /source */}
+          <Route
+            path='/source'
+            component={Goto}
+            destination='https://github.com/0J3/nora.lgbt'
+          />
           {/* ROUTE /goto/[url] */}
           <Route path='/goto/:url*' component={Goto} />
           {/* ROUTE /about */}
@@ -39,6 +55,12 @@ const App: FunctionalComponent = () => {
           <Route path='/bio' component={Profile} />
           {/* ROUTE /profile */}
           <Route path='/profile' component={Profile} />
+          {/* ROUTE /projects */}
+          <Route
+            path='/projects'
+            component={Goto}
+            destination='/about#Projects'
+          />
           {/* ROUTE 404 */}
           <NotFoundPage default />
           {/* !SECTION */}

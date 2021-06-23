@@ -1,0 +1,72 @@
+.Projects {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+}
+.Project {
+  width: 45%;
+  min-height: 10em;
+  min-width: 100px;
+  max-width: 45%;
+  padding: 10px 10px;
+  display: contents;
+  // flex: 1;
+  transition: width 1s;
+  .Content {
+    margin: 10px 10px;
+    padding: 10px 30px;
+    background: #2a2b2c8e;
+    border-radius: 20px;
+    min-height: 10em;
+    height: 200px;
+    .Buttons {
+      .URL {
+        height: 25px;
+        width: 25px;
+        background: url(./site.png);
+        background-size: 100%;
+        display: inline-block;
+        filter: invert(1);
+      }
+      .Source {
+        height: 25px;
+        width: 25px;
+        background: url(./source.png);
+        background-size: 100%;
+        display: inline-block;
+      }
+      text-align: center;
+    }
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .Projects {
+    grid-template-columns: auto auto auto auto;
+  }
+  .Project {
+    width: 23% !important;
+    max-width: 23% !important;
+  }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1701px) {
+  .Projects {
+    grid-template-columns: auto auto auto;
+  }
+  .Project {
+    width: 32% !important;
+    max-width: 32% !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .Projects {
+    grid-template-columns: auto;
+  }
+  .Project {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}

@@ -1,9 +1,76 @@
 .about {
-  padding: 10px 10px;
+  padding: 0 10;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   scroll-snap-type: y mandatory;
   .section {
     scroll-snap-align: start;
+    padding: 100px 10vw;
+    // min-height: 500px;
+    height: auto;
+    width: 100vw;
+    border: 0;
+    .sectionContents {
+      max-width: 80vw;
+      min-height: 300px;
+      height: auto;
+      transition: width 1s;
+    }
+    transition: all 1s;
+    // SECTION Sections
+    // ANCHOR About me
+    &.aboutSection {
+      .pfpImg {
+        max-height: 300px;
+        box-shadow: 0 0 10px #000;
+        border-radius: 25px;
+        transition: max-height 1s;
+      }
+      .sectionContents {
+        float: right;
+        text-align: left;
+        width: calc(80vw - 400px);
+        // height: 300px;
+        transition: all 1s;
+      }
+      background: #751775;
+    }
+    // ANCHOR Projects
+    &.projectsSection {
+      .sectionContents {
+        width: 80vw;
+        min-height: max-content;
+        transition: all 1s;
+      }
+      height: max-content;
+      background: #10004b;
+    }
+    // !SECTION
+  }
+}
+[class^='route_about'] > [id='pageContents'] {
+  --headerSize: 0 !important;
+}
+@media screen and (max-width: 1012px) {
+  .section.aboutSection {
+    .pfpImg {
+      max-height: 250px !important;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    padding-top: 100px !important;
+  }
+  .section {
+    .sectionContents {
+      width: 80vw !important;
+      float: none !important;
+      display: block !important;
+      text-align: center !important;
+      min-height: 100px !important;
+    }
+    padding: 25px 10vw !important;
   }
 }

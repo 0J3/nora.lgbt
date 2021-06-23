@@ -13,9 +13,9 @@ const Header: FunctionalComponent = () => {
         <Link activeClassName={style.active} href='/about'>
           About me
         </Link>
-        <Link activeClassName={style.active} href='/projects'>
+        {/* <Link activeClassName={style.active} href='/projects'>
           Projects
-        </Link>
+        </Link> */}
       </nav>
     </header>
   );

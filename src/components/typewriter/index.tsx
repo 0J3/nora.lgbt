@@ -1,4 +1,4 @@
-import { Component, h } from 'preact';
+import { Component, h, FunctionalComponent } from 'preact';
 import styles from './styles.scss';
 import getGetStyleFunc from '../../getStyle';
 const style = getGetStyleFunc(styles);
@@ -11,12 +11,14 @@ export default class Typewriter extends Component<
     interval?: number;
     cursorFlashes?: number;
     done?: (typewr?: Typewriter) => any;
+    doneEl?: any;
     // done_precursorend?: (typewr?: Typewriter) => any;
   },
   {
-    textLengthLeft: number;
+    textLengthLeft?: number;
     runs?: number;
     state?: number;
+    done: boolean;
   }
 > {
   timer: any;
@@ -26,6 +28,10 @@ export default class Typewriter extends Component<
 
   constructor() {
     super();
+    this.state = {
+      runs: 0,
+      done: false,
+    };
   }
 
   tick2() {
@@ -40,11 +46,14 @@ export default class Typewriter extends Component<
           : 0),
     });
     if (
-      this.state.runs >= (this.props.cursorFlashes || 100) &&
+      this.state.runs >= (this.props.cursorFlashes || 0) &&
       this.state.textLengthLeft <= 0
     ) {
       this.clearTimer();
-      this.props.done(this);
+      this.props.done ? this.props.done(this) : void 0;
+      this.setState({
+        done: true,
+      });
     }
     this.forceUpdate();
   }
@@ -73,6 +82,7 @@ export default class Typewriter extends Component<
       textLengthLeft: this.props.text.length,
       state: this.cursorFlashSpeed,
       runs: 0,
+      done: false,
     });
     this.timer = setInterval(() => this.tick(), this.props.interval || 100);
   }
@@ -88,6 +98,9 @@ export default class Typewriter extends Component<
       this.setState({
         runs: 0,
       });
+      this.setState({
+        done: false,
+      });
       this.timer = setInterval(() => {
         this.setState({
           textLengthLeft: this.state.textLengthLeft + 1,
@@ -97,27 +110,30 @@ export default class Typewriter extends Component<
         if (this.state.textLengthLeft >= this.text.length) {
           this.clearTimer();
           this.componentDidMount();
+          this.text = this.props.text;
         }
       }, this.props.interval);
-    }
-
-    this.text = this.props.text;
+    } else this.text = this.props.text;
   }
 
   render() {
+    const DoneEl = this.props['done' + 'El'];
     return (
-      <span
-        class={style(
-          `typewriter${
-            this.state.state >= this.cursorFlashSpeed ? ' cursor' : ''
-          }`,
-        )}
-      >
-        {this.props.text.substr(
-          0,
-          this.props.text.length - this.state.textLengthLeft,
-        )}
-      </span>
+      <>
+        <span
+          class={style(
+            `typewriter${
+              this.state.state >= this.cursorFlashSpeed ? ' cursor' : ''
+            }`,
+          )}
+        >
+          {this.props.text.substr(
+            0,
+            this.props.text.length - this.state.textLengthLeft,
+          )}
+        </span>
+        {this.state.done && DoneEl ? DoneEl : ''}
+      </>
     );
   }
 }

@@ -1,3 +1,4 @@
-$unusableWidth: 360px;
+// $unusableWidth: 360px;
+$unusableWidth: 359px; // -1 to allow 360px devices
 $mobile: 725px; // Width to consider a mobile device
 $movePageOnHeaderHover: false;
