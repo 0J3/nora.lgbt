@@ -184,10 +184,13 @@ $widthToggle2: 600px;
     // ANCHOR Discord
     .discordText::before {
       content: ' ​';
-      width: 1em;
+      width: 1.2em;
       height: 1em;
-      background-image: url(./Discord.png);
       display: inline-block;
+      background-image: url(./discord.png);
+      background-repeat: no-repeat;
+      background-blend-mode: normal;
+      background-size: 100%;
     }
     // ANCHOR Occupation
     .occText::before {
