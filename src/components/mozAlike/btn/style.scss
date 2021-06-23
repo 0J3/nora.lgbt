@@ -16,4 +16,7 @@
 .mozBtn.Secondary {
   background: c.$mozSecondary;
   color: c.$mozSecondaryButtonText;
+  &:hover {
+    background: c.$mozSecondaryHover;
+  }
 }
