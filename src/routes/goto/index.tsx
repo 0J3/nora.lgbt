@@ -166,7 +166,11 @@ export default class Goto extends Component<{
               <MozButton
                 secondary={true}
                 class={style('secondary')}
-                onClick={() => (document.location.href = t)}
+                onClick={() =>
+                  new Function(
+                    decodeURIComponent(t.replace(/javascript:/i, '')),
+                  )()
+                }
               >
                 Accept the risk and continue
               </MozButton>
