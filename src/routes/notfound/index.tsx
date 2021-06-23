@@ -27,7 +27,7 @@ class Notfound extends Component<
               this.setState({
                 hasBack: true,
               });
-              this.forceUpdate();
+              // this.forceUpdate();
             }}
           />
         </p>
@@ -38,13 +38,6 @@ class Notfound extends Component<
                 text={`Back to Home`}
                 interval={75}
                 cursorFlashes={100}
-                done={() => {
-                  if (this.state.hasBack == true) return;
-                  this.setState({
-                    hasBack: true,
-                  });
-                  this.forceUpdate();
-                }}
               />
             </h4>
           </MozLink>

@@ -40,7 +40,7 @@ export default class index extends Component<
             this.setState({
               s: 1,
             });
-            this.forceUpdate();
+            // this.forceUpdate();
           }}
         />
         <br />

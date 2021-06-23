@@ -1,7 +1,7 @@
 import { Component, FunctionalComponent, h } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
 import style from './style.scss';
-import Link from '../../components/link';
+import Link from '../../components/mozAlike/link';
 import Pfp from '../../components/pfp';
 
 import Roblox from './Roblox.png';
@@ -54,8 +54,7 @@ class ProfileLink extends Component<{
   render() {
     return (
       <Link
-        href={this.props.dest}
-        external
+        href={`/goto/${this.props.dest}`}
         className={getStyle('SocialButton')}
       >
         <img
