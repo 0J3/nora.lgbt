@@ -9,10 +9,9 @@ export default class About extends Component {
   render() {
     return (
       <div className={Class('about')}>
-        Soon&trade;
-        <br />
-        For now, you might want to read my{' '}
-        <MozLink href='/bio'>bio page</MozLink>
+        <div className={Class('aboutPanel')}>
+          <h2>Hi</h2>
+        </div>
       </div>
     );
   }
