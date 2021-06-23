@@ -9,6 +9,7 @@ import Goto from '../routes/goto';
 
 import Header from './header';
 import styles from './app.scss';
+import projects from '../routes/projects';
 
 const App: FunctionalComponent = () => {
   return (
@@ -54,6 +55,8 @@ const App: FunctionalComponent = () => {
           <Route path='/bio' component={Profile} />
           {/* ROUTE /profile */}
           <Route path='/profile' component={Profile} />
+          {/* ROUTE /projects */}
+          <Route path='/projects' component={projects} />
           {/* ROUTE 404 */}
           <NotFoundPage default />
           {/* !SECTION */}

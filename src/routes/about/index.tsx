@@ -6,6 +6,9 @@ import getGSF from '../../getStyle';
 import Typewriter from '../../components/typewriter';
 const Class = getGSF(style);
 
+import projects from '../projects';
+
+const typeinterval = 12; //25
 export default class About extends Component {
   render() {
     return (
@@ -23,23 +26,27 @@ export default class About extends Component {
                 `Hi, I'm 0J3, an Autistic, Open-Source-Software-Oriented, Full-Stack, ` +
                 `Software developer who primarily writes their code in C#, Lua, and Typescript. A significant portion of my code can be found on my`
               }
-              interval={25}
+              interval={typeinterval}
               cursorFlashes={1}
               doneEl={
                 <>
                   <MozLink href='/gh'>
-                    <Typewriter text='Github' interval={25} cursorFlashes={1} />
+                    <Typewriter
+                      text='Github'
+                      interval={typeinterval}
+                      cursorFlashes={1}
+                    />
                   </MozLink>
                   <Typewriter
                     text='Including, but not limited to,'
-                    interval={25}
+                    interval={typeinterval}
                     cursorFlashes={1}
                     doneEl={
                       <>
                         <MozLink href='/source'>
                           <Typewriter
                             text='This Page'
-                            interval={25}
+                            interval={typeinterval}
                             cursorFlashes={1}
                           />
                         </MozLink>
@@ -48,7 +55,7 @@ export default class About extends Component {
                             '. The majority of my code is licensed under the AGPL-3.0 License ' +
                             'but a significant portion is under the MIT License - Point being, you can use most of my code (ie libraries, code snippets) almost anywhere.'
                           }
-                          interval={25}
+                          interval={typeinterval}
                           cursorFlashes={1}
                         />
                       </>
