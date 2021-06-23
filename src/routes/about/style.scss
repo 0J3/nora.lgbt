@@ -1,3 +1,9 @@
 .about {
   padding: 10px 10px;
+  width: 100vw;
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  .section {
+    scroll-snap-align: start;
+  }
 }
