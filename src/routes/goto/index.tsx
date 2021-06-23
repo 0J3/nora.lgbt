@@ -138,8 +138,9 @@ export default class Goto extends Component<{
                 specified, to protect your security.
               </p>
               <p>
-                <code>JavaScript:</code> links can contain "Cookie Loggers" and
-                run any code, as if it were from nora.lgbt!
+                JavaScript: URLs can contain potentially malicious code, and
+                should only be visited{' '}
+                <b>if you know exactly what you are doing!</b>
               </p>
               <p>
                 If you trust this code, you can click the button labeled{' '}
