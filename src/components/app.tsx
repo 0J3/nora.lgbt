@@ -40,6 +40,12 @@ const App: FunctionalComponent = () => {
             component={Goto}
             destination='https://github.com/0J3/'
           />
+          {/* ROUTE /source */}
+          <Route
+            path='/source'
+            component={Goto}
+            destination='https://github.com/0J3/nora.lgbt'
+          />
           {/* ROUTE /goto/[url] */}
           <Route path='/goto/:url*' component={Goto} />
           {/* ROUTE /about */}
