@@ -1,0 +1,79 @@
+@use '../../style/vars' as vars;
+
+@mixin activeHeader() {
+  top: 0;
+  background: #3a57b78e;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: -48px;
+  width: 100%;
+  height: 56px;
+  padding: 0;
+  background: #3a57b7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 50;
+  transition: all 1s;
+
+  h1 {
+    float: left;
+    margin: 0;
+    padding: 0 15px;
+    font-size: 24px;
+    line-height: 56px;
+    font-weight: 400;
+    color: #fff;
+  }
+
+  nav {
+    float: right;
+    font-size: 100%;
+
+    a {
+      transition: all 0.5s;
+      color: #ffffff67;
+      display: inline-block;
+      height: 56px;
+      line-height: 56px;
+      padding: 0 15px;
+      min-width: 50px;
+      text-align: center;
+      text-decoration: none;
+      will-change: color;
+    }
+    a:hover,
+    a:active {
+      // background: rgba(0, 0, 0, 0.2);
+      color: #ffffffa1;
+    }
+
+    a.active {
+      // background: rgba(0, 0, 0, 0.4);
+      color: #ffffff;
+    }
+  }
+}
+.header:hover {
+  @include activeHeader();
+}
+// ANCHOR mobile
+@media screen and (max-width: vars.$mobile) {
+  .header {
+    @include activeHeader();
+  }
+}
+
+// ANCHOR Too Small
+@media screen and (max-width: vars.$unusableWidth) {
+  .header {
+    top: -128px !important;
+    pointer-events: none;
+    nav {
+      position: relative;
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+  }
+}

@@ -63,6 +63,12 @@
       "scope": "file"
     },
     {
+      "tag": "MIXIN",
+      "iconColor": "#FFEE00",
+      "highlightColor": "#FFEE00",
+      "scope": "file"
+    },
+    {
       "tag": "REVIEW",
       "iconColor": "green",
       "highlightColor": "#64DD17",

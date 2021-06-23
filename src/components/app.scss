@@ -1,0 +1,42 @@
+@use '../style/vars';
+
+.pageContents {
+  --headerSize: 8px;
+  width: 100vw;
+  height: calc(100vh - var(--headerSize));
+  position: fixed;
+  left: 0;
+  top: var(--headerSize);
+  transition: top 1s;
+  backdrop-filter: blur(5px);
+}
+@if vars.$movePageOnHeaderHover == true {
+  @debug 'Moving page contents on header hover';
+  header:hover + .pageContents {
+    --headerSize: 56px;
+  }
+}
+
+// ANCHOR mobile
+@media screen and (max-width: vars.$mobile) {
+  .pageContents {
+    --headerSize: 56px;
+  }
+}
+
+@media screen and (max-width: vars.$unusableWidth) {
+  .pageContents::before {
+    content: 'Your screen is too small to display this page';
+    color: #fff;
+    display: block;
+    width: 75vw;
+    text-align: center;
+    position: fixed;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+  }
+  .pageContents * {
+    display: none;
+  }
+}
