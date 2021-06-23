@@ -3,6 +3,7 @@ import { Route, Router } from 'preact-router';
 
 import Home from '../routes/home';
 import Profile from '../routes/profile';
+import About from '../routes/about';
 import NotFoundPage from '../routes/notfound';
 import Goto from '../routes/goto';
 
@@ -33,7 +34,7 @@ const App: FunctionalComponent = () => {
           {/* ROUTE /goto/[url] */}
           <Route path='/goto/:url*' component={Goto} />
           {/* ROUTE /about */}
-          <Route path='/about' component={Profile} />
+          <Route path='/about' component={About} />
           {/* ROUTE /bio */}
           <Route path='/bio' component={Profile} />
           {/* ROUTE /profile */}
