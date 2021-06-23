@@ -59,6 +59,8 @@ export default class Goto extends Component<{
   destination?: string;
 }> {
   render() {
+    if (typeof window !== 'undefined')
+      document.body.className += ' ' + style('goto');
     let t: string;
     if (this.props.destination) {
       t = this.props.destination;

@@ -1,8 +1,10 @@
 $padding: 10px;
 $border: 16px;
 
-header {
-  top: -100px !important;
+body.goto {
+  header {
+    display: none;
+  }
 }
 
 body.xsswarning {
