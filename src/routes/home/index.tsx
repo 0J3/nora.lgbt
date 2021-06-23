@@ -28,7 +28,7 @@ export default class index extends Component<
     return (
       <div class={Class('home')}>
         <h2>0J3</h2>
-        <TimeSince time={1196121600} precision={0} />
+        A <TimeSince time={1196121600} precision={0} />
         <Typewriter
           text={
             ' year old C#/TS Developer, Weeb, and otherwise dumbass. Here are some links:'
@@ -97,7 +97,6 @@ export default class index extends Component<
         ) : (
           ''
         )}
-
         <span></span>
       </div>
     );

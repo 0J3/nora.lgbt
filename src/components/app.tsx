@@ -12,9 +12,18 @@ import styles from './app.scss';
 
 const App: FunctionalComponent = () => {
   return (
-    <div id='preact_root'>
+    <div
+      id='preact_root'
+      class={
+        typeof window !== 'undefined'
+          ? `route_${document.location.pathname
+              .replace('/', '')
+              .replace(/\//g, '_')}`
+          : ''
+      }
+    >
       <Header />
-      <div class={`s_pageContents ${styles.pageContents}`}>
+      <div class={`s_pageContents ${styles.pageContents}`} id='pageContents'>
         <Router>
           {/* SECTION Routes */}
           {/* ROUTE / */}
