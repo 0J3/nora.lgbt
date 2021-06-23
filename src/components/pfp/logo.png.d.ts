@@ -1,1 +1,2 @@
-export default string;
+export const type: string;
+export default type;

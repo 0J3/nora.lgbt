@@ -1,1 +1,2 @@
-export default any;
+export const typeofAny: any;
+export default typeofAny;

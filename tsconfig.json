@@ -11,11 +11,11 @@
     // !SETTINGS
 
     // SETTINGS File Locations
-    "rootDir": "./ts",                        // SETTING Input (Root) Directory
-    "outDir": "./js",                         // SETTING Output Directory
+    "rootDir": "./src",                       // SETTING Input (Root) Directory
+    "outDir": "./dist",                       // SETTING Output Directory
     "declarationDir": "./d",                  // SETTING Declaration Directory
-    "mapRoot": "./js",                        // SETTING Source Map Directory (For Debuggers)
-    "sourceRoot": "./ts",                     // SETTING Source Code Directory (For Debuggers)
+    "mapRoot": "./dist",                      // SETTING Source Map Directory (For Debuggers)
+    "sourceRoot": "./src",                    // SETTING Source Code Directory (For Debuggers)
     // !SETTINGS
 
     "module": "CommonJS",                     // SETTING Module Resolution - Recommended value: Depends on your use case
@@ -24,11 +24,11 @@
     // !SETTINGS
 
     // SETTINGS Strict
-    "strict": true,                           // SETTING Enable all strict type checking options - Recommended value: true
-    "strictBindCallApply": true,              // SETTING Check that bind/call/apply methods match the original function - Recommended value: true
-    "strictFunctionTypes": true,              // SETTING When assigning functions, check to ensure parameters and the return values are subtype-compatible. - Recommended value: true
-    "strictPropertyInitialization": true,     // SETTING Check for proprieties that are declared but not defined in the constructor - Recommended value: true
-    "strictNullChecks": true,                 // SETTING When type checking, take `null`/`undefined` into account
+    "strict": false,                          // SETTING Enable all strict type checking options - Recommended value: true
+    "strictBindCallApply": false,             // SETTING Check that bind/call/apply methods match the original function - Recommended value: true
+    "strictFunctionTypes": false,             // SETTING When assigning functions, check to ensure parameters and the return values are subtype-compatible. - Recommended value: true
+    "strictPropertyInitialization": false,    // SETTING Check for proprieties that are declared but not defined in the constructor - Recommended value: true
+    "strictNullChecks": false,                // SETTING When type checking, take `null`/`undefined` into account
     "alwaysStrict": true,                     // SETTING Always add "use strict" to files
     // !SETTINGS
 
@@ -43,7 +43,14 @@
     "noFallthroughCasesInSwitch": true,
     // !SETTINGS
 
+    // SETTINGS React
+    "jsx": "preserve",                        // SETTING Do JSX
+    "jsxFactory": "h",
+    // !SETTINGS
+
     "diagnostics": false,                     // SETTING Log TS Diagnostics
-  }
+  },
   // !SECTION
 }
+
+// SOURCE https://github.com/0J3/TSTemplate/blob/main/tsconfig.json
