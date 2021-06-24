@@ -56,6 +56,7 @@ const projects: Project[] = [
     name: 'GoosemodInstaller',
     description: 'An unofficial Goosemod Installer - Not much more to it',
     repoURL: '/goto/gh/0j3/goosemodinstaller',
+    projURL: 'https://github.com/0J3/goosemodinstaller/latest',
   },
   {
     name: 'VideoPlayer',
