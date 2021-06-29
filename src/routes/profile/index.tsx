@@ -149,7 +149,7 @@ class ProfilePageContent extends Component<
               Scientist, Train Enthusiast, Weeb, Furry, Game Developer and Web
               Designer, with'
                 cursorFlashes={1}
-                interval={75}
+                interval={40}
                 done={() => {
                   if (this.state.stage >= 1) return;
                   this.setState({

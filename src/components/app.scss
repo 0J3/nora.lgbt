@@ -50,6 +50,11 @@
   transform: translate(-50%, -50%);
   pointer-events: none;
   opacity: 0;
+  transition: opacity 0.5s;
+}
+.pageContents *,
+header {
+  transition: filter 0.5s;
 }
 @media screen and (max-width: vars.$unusableWidth) {
   .pageContents::before {
@@ -64,7 +69,7 @@
 }
 [data-darkreader-scheme] {
   .pageContents::before {
-    opacity: 1;
+    opacity: 0.25;
     pointer-events: all;
   }
   .pageContents::after {
@@ -72,6 +77,8 @@
   }
   .pageContents *,
   header {
-    display: none;
+    // display: none;
+    filter: blur(10px);
+    pointer-events: none;
   }
 }
