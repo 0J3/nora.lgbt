@@ -23,12 +23,11 @@
     // ANCHOR About me
     &.aboutSection {
       .pfpImg {
+        min-height: 236px;
         max-height: 300px;
         box-shadow: 0 0 10px #000;
         border-radius: 25px;
         transition: max-height 1s;
-        width: 236px;
-        height: 236px;
       }
       .sectionContents {
         float: right;
