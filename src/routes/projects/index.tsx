@@ -23,20 +23,28 @@ interface ProjectBase {
    */
   description: string;
 }
-interface Project extends ProjectBase {
+interface ProjectURLs {
   /**
    * @name repoURL
    * @description The url of the repository
-   * @notice Either this or projURL is required
+   * @notice Either this, discordURL or projURL is required
    */
   repoURL?: string;
   /**
    * @name repoURL
    * @description The url of the site for the project
-   * @notice Either this or repoURL is required
+   * @notice Either this, discordURL or repoURL is required
    */
   projURL?: string;
+  /**
+   * @name repoURL
+   * @description The url of the site for the project
+   * @notice Either this, projURL or repoURL is required
+   */
+  discordURL?: string;
 }
+
+interface Project extends ProjectURLs, ProjectBase {}
 
 const projects: Project[] = [
   {
@@ -91,7 +99,7 @@ const checkProject = (proj: Project): boolean => {
   if (!proj.description) throw new Error('Invalid Project: No Name');
 
   // ANCHOR Check for URLs (incase ts doesnt)
-  if (!proj.projURL && !proj.repoURL)
+  if (!proj.projURL && !proj.repoURL && !proj.discordURL)
     throw new Error('Invalid Project: No URL');
 
   return true;
@@ -117,6 +125,14 @@ export class ProjectComponent extends Component<{
             {this.props.Project.repoURL ? (
               <MozLink
                 class={Class('Source')}
+                href={this.props.Project.repoURL}
+              />
+            ) : (
+              <></>
+            )}
+            {this.props.Project.discordURL ? (
+              <MozLink
+                class={Class('Discord')}
                 href={this.props.Project.repoURL}
               />
             ) : (

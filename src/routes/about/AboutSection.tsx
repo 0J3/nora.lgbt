@@ -7,7 +7,7 @@ export default (Class: (a: string) => string) => {
   return (
     <div className={Class('section aboutSection')}>
       <img
-        src='https://cdn.discordapp.com/avatars/596425713347723269/a_105416b95eb704d9acbc0fde682cae98.gif?size=512'
+        src='https://cdn.discordapp.com/avatars/596425713347723269/e043f094e48c4d93e6daff727b0d6cd9.webp?size=512'
         alt='Profile Picture'
         className={Class('pfpImg')}
       />
@@ -35,18 +35,9 @@ export default (Class: (a: string) => string) => {
                 cursorFlashes={cursor}
                 doneEl={
                   <>
-                    <MozLink href='/source'>
-                      <Typewriter
-                        text='This Page'
-                        interval={typeinterval}
-                        cursorFlashes={cursor}
-                      />
-                    </MozLink>
+                    <MozLink href='/source'>This Page</MozLink>
                     <Typewriter
-                      text={
-                        '. The majority of my code is licensed under the AGPL-3.0 License ' +
-                        'but a significant portion is under the MIT License - Point being, you can use most of my code (ie libraries, code snippets) almost anywhere.'
-                      }
+                      text={'. '}
                       interval={typeinterval}
                       cursorFlashes={1}
                     />
