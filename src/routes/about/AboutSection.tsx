@@ -7,7 +7,7 @@ export default (Class: (a: string) => string) => {
   return (
     <div className={Class('section aboutSection')}>
       <img
-        src='https://cdn.discordapp.com/avatars/596425713347723269/e043f094e48c4d93e6daff727b0d6cd9.webp?size=512'
+        src='https://cdn.discordapp.com/avatars/596425713347723269/f075cc2f9d877ca93d4d28c788c099e4.webp?size=512'
         alt='Profile Picture'
         className={Class('pfpImg')}
       />
