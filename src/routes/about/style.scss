@@ -14,7 +14,6 @@
     border: 0;
     .sectionContents {
       max-width: 80vw;
-      min-height: 300px;
       height: auto;
       transition: width 1s;
     }
@@ -22,6 +21,9 @@
     // SECTION Sections
     // ANCHOR About me
     &.aboutSection {
+      .sectionContents {
+        min-height: 300px;
+      }
       .pfpImg {
         min-height: 236px;
         max-height: 300px;
@@ -50,6 +52,11 @@
     }
     // !SECTION
   }
+  // SECTION Interests
+  .interestsSection {
+    background: #2b008f;
+  }
+  // !SECTION
 }
 [class^='route_about'] > [id='pageContents'] {
   --headerSize: 0 !important;

@@ -4,6 +4,8 @@ import stylesheet from './style.scss';
 import gss from '../getStyle';
 const style = gss(stylesheet);
 
+const componentVersion = '1.0.0';
+
 export default class MozLink extends Component<{
   LinkComponent?: typeof Component;
   href?: string;
@@ -23,6 +25,8 @@ export default class MozLink extends Component<{
           class={Classes}
           className={Classes}
           target={this.props.target}
+          data-mozAlikeComponent={'lgbt.nora.MozAlike.Link'}
+          data-mozAlikeComponentVersion={componentVersion}
         >
           {this.props.children}
         </this.props.LinkComponent>
@@ -40,6 +44,9 @@ export default class MozLink extends Component<{
                 }
               : () => {}
           }
+          data-link={this.props.href}
+          data-mozAlikeComponent={'lgbt.nora.MozAlike.Link'}
+          data-mozAlikeComponentVersion={componentVersion}
         >
           {this.props.children}
         </Link>

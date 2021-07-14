@@ -7,9 +7,12 @@ export default (Class: (a: string) => string) => {
   return (
     <div className={Class('section aboutSection')}>
       <img
-        src='https://cdn.discordapp.com/avatars/596425713347723269/f075cc2f9d877ca93d4d28c788c099e4.webp?size=512'
+        src='https://cdn.discordapp.com/avatars/596425713347723269/f077cef846cc41fb4e5c4fbf0a6c30d7.webp?size=512'
         alt='Profile Picture'
         className={Class('pfpImg')}
+        style={{
+          minHeight: '300px',
+        }}
       />
       <div className={Class('sectionContents')}>
         <h2 className={Class('sectionTitle')}>About Me</h2>
@@ -37,9 +40,81 @@ export default (Class: (a: string) => string) => {
                   <>
                     <MozLink href='/source'>This Page</MozLink>
                     <Typewriter
-                      text={'. '}
+                      text={'. You can find some of my interests '}
                       interval={typeinterval}
-                      cursorFlashes={1}
+                      cursorFlashes={cursor}
+                      doneEl={
+                        <>
+                          <MozLink href='#interests'>here</MozLink>
+                          <Typewriter
+                            text={'. Here are some social medias of mine:'}
+                            interval={typeinterval}
+                            cursorFlashes={1}
+                            doneEl={
+                              <>
+                                <br />
+                                <MozLink
+                                  href='https://nora.lgbt/gh'
+                                  target='_blank'
+                                >
+                                  Github
+                                </MozLink>
+                                <br />
+                                <MozLink
+                                  href='https://nora.lgbt/yt'
+                                  target='_blank'
+                                >
+                                  Youtube
+                                </MozLink>
+                                <br />
+                                <MozLink
+                                  href='https://twitter.com/0J3_3'
+                                  target='_blank'
+                                >
+                                  Twitter
+                                </MozLink>{' '}
+                                <Typewriter
+                                  text={'(More Professional)'}
+                                  interval={typeinterval}
+                                  cursorFlashes={1}
+                                  doneEl={
+                                    <>
+                                      <br />
+                                      <MozLink
+                                        href='https://twitter.com/0J3_3'
+                                        target='_blank'
+                                      >
+                                        Twitter
+                                      </MozLink>{' '}
+                                      <Typewriter
+                                        text={'(Less Professional)'}
+                                        interval={typeinterval}
+                                        cursorFlashes={1}
+                                        doneEl={
+                                          <>
+                                            <br />
+                                            <MozLink
+                                              href='https://discord.com/users/596425713347723269'
+                                              target='_blank'
+                                            >
+                                              Discord
+                                            </MozLink>{' '}
+                                            <Typewriter
+                                              text={'(pwease fwiend me)'}
+                                              interval={typeinterval}
+                                              cursorFlashes={25}
+                                            />
+                                          </>
+                                        }
+                                      />
+                                    </>
+                                  }
+                                />
+                              </>
+                            }
+                          />
+                        </>
+                      }
                     />
                   </>
                 }

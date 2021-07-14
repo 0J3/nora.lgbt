@@ -10,17 +10,31 @@ export default class CustomLink extends Component<{
   className?: string;
 }> {
   render() {
-    return (
-      <Link
-        href={this.props.href}
-        target={this.props.target}
-        {...(this.props.download ? `download=${this.props.download}` : '')}
-        class={`${this.props.class || ''} ${
-          this.props.className || ''
-        } link customlink`}
-      >
-        {this.props.children}
-      </Link>
-    );
+    if (!this.props.external)
+      return (
+        <Link
+          href={this.props.href}
+          target={this.props.target}
+          {...(this.props.download ? `download=${this.props.download}` : '')}
+          class={`${this.props.class || ''} ${
+            this.props.className || ''
+          } link customlink`}
+        >
+          {this.props.children}
+        </Link>
+      );
+    else
+      return (
+        <a
+          href={this.props.href}
+          target={this.props.target}
+          {...(this.props.download ? `download=${this.props.download}` : '')}
+          class={`${this.props.class || ''} ${
+            this.props.className || ''
+          } link customlink`}
+        >
+          {this.props.children}
+        </a>
+      );
   }
 }

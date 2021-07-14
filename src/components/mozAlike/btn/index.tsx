@@ -3,6 +3,8 @@ import getGetStyleFunc from '../getStyle';
 import styles from './style.scss';
 const style = getGetStyleFunc(styles);
 
+const componentVersion = '1.0.0';
+
 export default class MozButton extends Component<{
   class?: string;
   onClick?: () => any;
@@ -21,6 +23,8 @@ export default class MozButton extends Component<{
           (this.props.class ? ` ${this.props.class}` : '')
         }
         onClick={this.props.onClick}
+        data-mozAlikeComponent={'lgbt.nora.MozAlike.Link'}
+        data-mozAlikeComponentVersion={componentVersion}
       >
         {this.props.children}
       </button>

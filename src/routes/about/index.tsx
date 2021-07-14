@@ -7,6 +7,7 @@ const Class = getGSF(style);
 
 import Projects from '../projects';
 import AboutSection from './AboutSection';
+import InterestsSection from './InterestsSection';
 
 // import { typeinterval, cursor } from '../vars';
 
@@ -21,6 +22,7 @@ export default class About extends Component {
             <Projects />
           </div>
         </div>
+        {InterestsSection(Class)}
       </div>
     );
   }
