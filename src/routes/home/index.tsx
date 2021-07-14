@@ -33,7 +33,7 @@ export default class index extends Component<
           text={
             ' year old C#/TS Developer, Weeb, and otherwise dumbass. Here are some links:'
           }
-          interval={25}
+          interval={12}
           cursorFlashes={2}
           done={() => {
             if (this.state.s >= 1) return;
@@ -48,8 +48,8 @@ export default class index extends Component<
           <Link href='/about'>
             <Typewriter
               text={'About me'}
-              interval={75}
-              cursorFlashes={2}
+              interval={25}
+              cursorFlashes={1}
               done={() => {
                 if (this.state.s >= 2) return;
                 this.setState({
@@ -66,8 +66,8 @@ export default class index extends Component<
           <Link href='/projects'>
             <Typewriter
               text={'My projects'}
-              interval={75}
-              cursorFlashes={2}
+              interval={25}
+              cursorFlashes={1}
               done={() => {
                 if (this.state.s >= 3) return;
                 this.setState({
@@ -84,8 +84,8 @@ export default class index extends Component<
           <Link href='/gh'>
             <Typewriter
               text={'My Github'}
-              interval={75}
-              cursorFlashes={2}
+              interval={25}
+              cursorFlashes={5}
               done={() => {
                 if (this.state.s >= 4) return;
                 this.setState({
