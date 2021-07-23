@@ -1,9 +1,0 @@
-@use "../colours" as c;
-
-.mozLink {
-  color: c.$mozPrimary;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-}

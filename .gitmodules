@@ -1,0 +1,3 @@
+[submodule "src/components/mozAlike"]
+	path = src/components/mozAlike
+	url = git@github.com:0J3/mozAlike.git
