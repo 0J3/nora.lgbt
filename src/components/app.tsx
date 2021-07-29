@@ -10,6 +10,7 @@ import Goto from '../routes/goto';
 import Header from './header';
 import styles from './app.scss';
 import projects from '../routes/projects';
+import Signing from '../routes/signing';
 
 const App: FunctionalComponent = () => {
   return (
@@ -67,6 +68,8 @@ const App: FunctionalComponent = () => {
             component={Goto}
             destination='/about#Projects'
           />
+          {/* ROUTE /signing */}
+          <Route path='/signing' component={Signing} />
           {/* ROUTE 404 */}
           <NotFoundPage default />
           {/* !SECTION */}
