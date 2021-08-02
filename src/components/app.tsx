@@ -68,6 +68,14 @@ const App: FunctionalComponent = () => {
             component={Goto}
             destination='/about#Projects'
           />
+          {/* ROUTE /pgp */}
+          <Route path='/pgp' component={Goto} destination='/signing' />
+          {/* ROUTE /gpg */}
+          <Route path='/gpg' component={Goto} destination='/signing' />
+          {/* ROUTE /crt */}
+          <Route path='/crt' component={Goto} destination='/signing' />
+          {/* ROUTE /cert */}
+          <Route path='/cert' component={Goto} destination='/signing' />
           {/* ROUTE /signing */}
           <Route path='/signing' component={Signing} />
           {/* ROUTE 404 */}
