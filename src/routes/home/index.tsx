@@ -25,6 +25,11 @@ export default class index extends Component<
   }
 > {
   render() {
+    if (
+      typeof window === 'undefined' || // prevent error with the below code, and prevent prerendering this page everywhere (idk why preact does that but it did)
+      (document.location.pathname !== '/' && document.location.pathname !== '') // only if the pathname is `/`, render it (fixes it showing when loading any page for a few frames)
+    )
+      return <></>;
     return (
       <div class={Class('home')}>
         <h2>0J3</h2>
