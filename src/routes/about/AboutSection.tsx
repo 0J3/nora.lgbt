@@ -7,7 +7,7 @@ export default (Class: (a: string) => string) => {
   return (
     <div className={Class('section aboutSection')}>
       <img
-        src='https://cdn.discordapp.com/avatars/596425713347723269/f306c7f869d2ddff49243110bafb9f6e.webp?size=512'
+        src='https://github.com/0J3/nora.lgbt/raw/v3/src/assets/icons/nezuko.png'
         alt='Profile Picture'
         className={Class('pfpImg')}
         style={{
