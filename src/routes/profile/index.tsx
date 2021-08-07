@@ -64,13 +64,13 @@ class ProfileLink extends Component<{
             maxHeight: '1.5em',
             ...(this.props.invertedIcon
               ? {
-                  filter: 'invert(1) hue-rotate(180deg)',
-                }
+                filter: 'invert(1) hue-rotate(180deg)',
+              }
               : {}),
             ...(this.props.transform
               ? {
-                  transform: this.props.transform,
-                }
+                transform: this.props.transform,
+              }
               : {}),
           }}
         />
@@ -97,7 +97,7 @@ class ProfilePageContent extends Component<
             className={getStyle('middle')}
             style={{
               textAlign: 'left',
-              paddingTop: 20 + 'px',
+              paddingTop: `${20  }px`,
             }}
           >
             <span
@@ -137,10 +137,10 @@ class ProfilePageContent extends Component<
             <p className={getStyle('aboutText sectionTitle')}>About</p>
             <p
               className={getStyle(
-                'aboutValue' +
-                  (this.state.stage >= 1
+                `aboutValue${ 
+                  this.state.stage >= 1
                     ? ' showAdditionalContent'
-                    : ' hideAdditionalContent'),
+                    : ' hideAdditionalContent'}`,
               )}
             >
               I'm Nora, a <TimeSinceBDay />{' '}

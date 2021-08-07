@@ -13,8 +13,8 @@ export default (Class: (a: string) => string) => {
         </h2>
         <Typewriter
           text={
-            `I am a Train Enthusiast, Plane Enthusiast, Phone Enthusiast, Computer Hardware Enthusiast (or whatever you wanna call it). I'm also an Open-Source-Focused Programmer,` +
-            ` a Youtuber, an anarchist, and a lot of other things which are very fucking boring.`
+            'I am a Train Enthusiast, Plane Enthusiast, Phone Enthusiast, Computer Hardware Enthusiast (or whatever you wanna call it). I\'m also an Open-Source-Focused Programmer,' +
+            ' a Youtuber, an anarchist, and a lot of other things which are very fucking boring.'
           }
           interval={typeinterval}
           cursorFlashes={cursor}

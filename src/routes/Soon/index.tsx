@@ -5,14 +5,14 @@ export default class Soon extends Component {
     return (
       <div>
         {/* <Counter /> */}
-        <p className={`ComingSoon`}>
+        <p className={'ComingSoon'}>
           This{' '}
           {document.location.hash
             ? document.location.hash.replace('#', '')
             : 'project'}{' '}
           is coming soon.
         </p>
-        <span></span>
+        <span />
       </div>
     );
   }

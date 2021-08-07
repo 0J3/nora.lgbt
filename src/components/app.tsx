@@ -21,8 +21,8 @@ const App: FunctionalComponent = () => {
       class={
         typeof window !== 'undefined'
           ? `route_${document.location.pathname
-              .replace('/', '')
-              .replace(/\//g, '_')}`
+            .replace('/', '')
+            .replace(/\//g, '_')}`
           : ''
       }
     >

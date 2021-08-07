@@ -1,5 +1,6 @@
 import MozLink from '../../components/mozAlike/link';
 import Typewriter from '../../components/typewriter';
+import { h } from 'preact';
 
 import { cursor, typeinterval } from './var';
 
@@ -18,8 +19,8 @@ export default (Class: (a: string) => string) => {
         <h2 className={Class('sectionTitle')}>About Me</h2>
         <Typewriter
           text={
-            `Hi, I'm 0J3, an Autistic, Open-Source-Software-Oriented, Full-Stack, ` +
-            `Software developer who primarily writes their code in C#, Lua, and Typescript. A significant portion of my code can be found on my`
+            'Hi, I\'m 0J3, an Autistic, Open-Source-Software-Oriented, Full-Stack, ' +
+            'Software developer who primarily writes their code in C#, Lua, and Typescript. A significant portion of my code can be found on my'
           }
           interval={typeinterval}
           cursorFlashes={cursor}

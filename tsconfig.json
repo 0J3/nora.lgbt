@@ -33,7 +33,7 @@
     // !SETTINGS
 
     // SETTING Emit Decorator Meta
-    "experimentalDecorators": false,          // SETTING Enable Expirimental Decorators
+    "experimentalDecorators": false,          // SETTING Enable Experimental Decorators
     "emitDecoratorMetadata": false,           // SETTING Emit Decorator Metadata
     
     // SETTINGS Code-smell 

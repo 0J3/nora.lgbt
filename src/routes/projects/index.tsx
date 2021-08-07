@@ -75,7 +75,7 @@ const projects: Project[] = [
   },
   {
     name: 'Nora.LGBT',
-    description: "The site you're on right now i guess",
+    description: 'The site you\'re on right now i guess',
     projURL: 'https://nora.lgbt/about',
     repoURL: 'https://github.com/0J3/nora.lgbt',
   },
