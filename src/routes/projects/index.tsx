@@ -79,6 +79,12 @@ const projects: Project[] = [
     projURL: 'https://nora.lgbt/about',
     repoURL: 'https://github.com/0J3/nora.lgbt',
   },
+  {
+    name: 'NezukoBD',
+    description: 'Nezuko is the best girl',
+    projURL: 'https://nezuko.nora.lgbt/',
+    repoURL: 'https://github.com/0J3/NezukoBD',
+  },
 ];
 
 /**
@@ -92,13 +98,13 @@ const projects: Project[] = [
  */
 const checkProject = (proj: Project): boolean => {
   // SECTION Check Project type
-  // ANCHOR Check for Name (incase ts doesnt)
+  // ANCHOR Check for Name (in case ts doesn't)
   if (!proj.name) throw new Error('Invalid Project: No Name');
 
-  // ANCHOR Check for Description (incase ts doesnt)
+  // ANCHOR Check for Description (in case ts doesn't)
   if (!proj.description) throw new Error('Invalid Project: No Name');
 
-  // ANCHOR Check for URLs (incase ts doesnt)
+  // ANCHOR Check for URLs (in case ts doesn't)
   if (!proj.projURL && !proj.repoURL && !proj.discordURL)
     throw new Error('Invalid Project: No URL');
 

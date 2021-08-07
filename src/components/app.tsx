@@ -11,6 +11,8 @@ import Header from './header';
 import styles from './app.scss';
 import projects from '../routes/projects';
 import Signing from '../routes/signing';
+import AboutBg from '../routes/bg/about';
+import Bg from '../routes/bg';
 
 const App: FunctionalComponent = () => {
   return (
@@ -78,6 +80,14 @@ const App: FunctionalComponent = () => {
           <Route path='/cert' component={Goto} destination='/signing' />
           {/* ROUTE /signing */}
           <Route path='/signing' component={Signing} />
+          {/* ROUTE /bg */}
+          <Route path='/bg' component={AboutBg} />
+          {/* ROUTE /bg/:clr */}
+          <Route path='/bg/:clr' component={Bg} />
+          {/* ROUTE /bg/:r/:g/:b */}
+          <Route path='/bg/:r/:g/:b' component={Bg} />
+          {/* ROUTE /bg/:r/:g/:b/:a? */}
+          <Route path='/bg/:r/:g/:b/:a?' component={Bg} />
           {/* ROUTE 404 */}
           <NotFoundPage default />
           {/* !SECTION */}

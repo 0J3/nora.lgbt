@@ -1,0 +1,16 @@
+.aboutBg {
+  padding: 20px 20px;
+  a {
+    color: rgb(0, 110, 255) !important;
+  }
+}
+.bg {
+  z-index: 50000;
+  pointer-events: all;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+}
