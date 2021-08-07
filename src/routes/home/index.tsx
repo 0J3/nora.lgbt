@@ -50,6 +50,14 @@ export default class index extends Component<
         label: 'bg',
         location: '/bg',
       },
+      {
+        label: 'Source',
+        location: '/source',
+      },
+      {
+        label: 'NezukoBD',
+        location: 'https://nezuko.nora.lgbt/',
+      },
     ];
 
     if (
