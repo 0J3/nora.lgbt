@@ -25,6 +25,33 @@ export default class index extends Component<
   }
 > {
   render() {
+    interface L {
+      label: string;
+      location: string;
+    }
+    const links: L[] = [
+      {
+        label: 'About Me',
+        location: '/about',
+      },
+      {
+        label: 'Projects',
+        location: '/projects',
+      },
+      {
+        label: 'Github',
+        location: '/gh',
+      },
+      {
+        label: 'GPG Sig.',
+        location: '/pgp',
+      },
+      {
+        label: 'bg',
+        location: '/bg',
+      },
+    ];
+
     if (
       typeof window === 'undefined' || // prevent error with the below code, and prevent prerendering this page everywhere (idk why preact does that but it did)
       (document.location.pathname !== '/' && document.location.pathname !== '') // only if the pathname is `/`, render it (fixes it showing when loading any page for a few frames)
@@ -48,60 +75,28 @@ export default class index extends Component<
             // this.forceUpdate();
           }}
         />
-        <br />
-        {this.state.s >= 1 ? (
-          <Link href='/about'>
-            <Typewriter
-              text={'About me'}
-              interval={25}
-              cursorFlashes={1}
-              done={() => {
-                if (this.state.s >= 2) return;
-                this.setState({
-                  s: 2,
-                });
-              }}
-            />
-          </Link>
-        ) : (
-          ''
-        )}
-        <br />
-        {this.state.s >= 2 ? (
-          <Link href='/projects'>
-            <Typewriter
-              text={'My projects'}
-              interval={25}
-              cursorFlashes={1}
-              done={() => {
-                if (this.state.s >= 3) return;
-                this.setState({
-                  s: 3,
-                });
-              }}
-            />
-          </Link>
-        ) : (
-          ''
-        )}
-        <br />
-        {this.state.s >= 3 ? (
-          <Link href='/gh'>
-            <Typewriter
-              text={'My Github'}
-              interval={25}
-              cursorFlashes={5}
-              done={() => {
-                if (this.state.s >= 4) return;
-                this.setState({
-                  s: 4,
-                });
-              }}
-            />
-          </Link>
-        ) : (
-          ''
-        )}
+        {links.map((l, i) => (
+          <>
+            <br />
+            {this.state.s >= i + 1 ? (
+              <Link href={l.location}>
+                <Typewriter
+                  text={l.label}
+                  interval={25}
+                  cursorFlashes={5}
+                  done={() => {
+                    if (this.state.s >= i + 2) return;
+                    this.setState({
+                      s: i + 2,
+                    });
+                  }}
+                />
+              </Link>
+            ) : (
+              ''
+            )}
+          </>
+        ))}
         <span></span>
       </div>
     );
