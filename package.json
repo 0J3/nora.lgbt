@@ -1,8 +1,7 @@
 {
-  "private": true,
   "name": "nora.lgbt",
+  "description": "a thing uwu",
   "version": "0.0.0",
-  "license": "MIT",
   "scripts": {
     "build": "preact build",
     "serve": "sirv build --port 8080 --cors --single",
@@ -54,5 +53,9 @@
       "<rootDir>/tests/__mocks__/browserMocks.ts",
       "<rootDir>/tests/__mocks__/setupTests.ts"
     ]
-  }
+  },
+  "private": false,
+  "repository": "git@github.com:0J3/nora.lgbt.git",
+  "author": "0J3 <git@wafflepowered.com>",
+  "license": "MIT"
 }
