@@ -14,6 +14,7 @@ export default class Bg extends Component<{
   a?: number;
 }> {
   componentDidMount() {
+    document.documentElement.setAttribute('data-transparentBg', 'true');
     document.body.setAttribute('data-noHeader', 'true');
   }
   render() {

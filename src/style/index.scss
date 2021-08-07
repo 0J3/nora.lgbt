@@ -122,6 +122,15 @@ code {
   padding-right: 4px;
 }
 
+html[data-transparentBg],
+body[data-transparentBg] {
+  &,
+  & body,
+  & body #preact_root {
+    background: transparent !important;
+  }
+}
+
 // Extension things
 // GTranslate
 #gtx-trans {

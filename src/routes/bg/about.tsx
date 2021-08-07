@@ -19,9 +19,9 @@ export default class AboutBg extends Component {
           <code>
             <a href='https://nora.lgbt/bg/'>https://nora.lgbt/bg/</a>:clr
           </code>{' '}
-          where :clr is either a hex colour (supports: <code>#XXX</code>,
-          <code>#XXXX</code>,<code>#XXXXXX</code>,<code>#XXXXXXXX</code> and any
-          other CSS Colours), and fullscreen the page!
+          where :clr is either a hex colour (supports: <code>RGB</code>,
+          <code>RGBA</code>,<code>RRGGBB</code>, or<code>RRGGBBAA</code>), and
+          fullscreen the page!
         </p>
       </div>
     );
