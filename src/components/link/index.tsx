@@ -23,18 +23,17 @@ export default class CustomLink extends Component<{
           {this.props.children}
         </Link>
       );
-    else
-      return (
-        <a
-          href={this.props.href}
-          target={this.props.target}
-          {...(this.props.download ? `download=${this.props.download}` : '')}
-          class={`${this.props.class || ''} ${
-            this.props.className || ''
-          } link customlink`}
-        >
-          {this.props.children}
-        </a>
-      );
+    return (
+      <a
+        href={this.props.href}
+        target={this.props.target}
+        {...(this.props.download ? `download=${this.props.download}` : '')}
+        class={`${this.props.class || ''} ${
+          this.props.className || ''
+        } link customlink`}
+      >
+        {this.props.children}
+      </a>
+    );
   }
 }

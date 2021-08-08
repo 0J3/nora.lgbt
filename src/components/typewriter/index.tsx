@@ -117,7 +117,7 @@ export default class Typewriter extends Component<
   }
 
   render() {
-    const DoneEl = this.props['done' + 'El'];
+    const DoneEl = this.props.doneEl;
     return (
       <>
         <span

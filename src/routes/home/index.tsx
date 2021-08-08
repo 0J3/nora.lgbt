@@ -18,8 +18,8 @@ const Class = getGSF(style);
 //     );
 // };
 
-export default class index extends Component<
-  {},
+export default class Index extends Component<
+  any,
   {
     s: number;
   }
@@ -105,7 +105,7 @@ export default class index extends Component<
             )}
           </>
         ))}
-        <span></span>
+        <span />
       </div>
     );
   }

@@ -1,0 +1,41 @@
+env:
+  browser: true
+  es2021: true
+extends:
+  - 'eslint:recommended'
+  - 'preact'
+  - 'plugin:@typescript-eslint/recommended'
+parser: '@typescript-eslint/parser'
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 12
+  sourceType: module
+plugins:
+  - react
+  - '@typescript-eslint'
+rules:
+  indent:
+    - error
+    - 2
+  quotes:
+    - error
+    - single
+  linebreak-style:
+    - error
+    - unix
+  semi:
+    - error
+    - always
+  react/react-in-jsx-scope: off
+  react/jsx-key: off
+  react/no-unknown-property: off
+  react/prefer-stateless-function: off
+  react/no-did-update-set-state: off
+  react/no-did-mount-set-state: off
+  '@typescript-eslint/no-unused-vars': off
+  '@typescript-eslint/explicit-module-boundary-types': off
+  '@typescript-eslint/no-explicit-any': off
+  '@typescript-eslint/ban-types': off
+  '@typescript-eslint/no-empty-function': off
+  'react/display-name': off

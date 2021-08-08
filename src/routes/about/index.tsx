@@ -1,4 +1,4 @@
-import { Component } from 'preact';
+import { Component, h } from 'preact';
 
 import style from './style.scss';
 import getGSF from '../../getStyle';

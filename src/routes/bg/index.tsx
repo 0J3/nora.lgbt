@@ -23,10 +23,10 @@ export default class Bg extends Component<{
         className={Class('bg')}
         style={{
           backgroundColor: this.props.clr
-            ? '#' + decodeURIComponent(this.props.clr)
+            ? `#${  decodeURIComponent(this.props.clr)}`
             : this.props.a
-            ? `rgba(${this.props.r},${this.props.g},${this.props.b},${this.props.a})`
-            : `rgb(${this.props.r},${this.props.g},${this.props.b})`,
+              ? `rgba(${this.props.r},${this.props.g},${this.props.b},${this.props.a})`
+              : `rgb(${this.props.r},${this.props.g},${this.props.b})`,
         }}
       />
     );

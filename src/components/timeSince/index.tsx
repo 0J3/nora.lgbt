@@ -32,7 +32,7 @@ class TimeSince extends PureComponent<
   },
   t
 > {
-  text: string = '';
+  text = '';
   timer: any;
 
   constructor(props: any) {

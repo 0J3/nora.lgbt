@@ -8,8 +8,8 @@ import styles from './styles.scss';
 const style = getGetStyleFunc(styles);
 
 const valURL = (u: string) => {
-  // eslint-disable-next-line
   const rg =
+    // eslint-disable-next-line
     /^(http|https):\/\/(([a-zA-Z0-9$\-_.+!*'(),;:&=]|%[0-9a-fA-F]{2})+@)?(((25[0-5]|2[0-4][0-9]|[0-1][0-9][0-9]|[1-9][0-9]|[0-9])(\.(25[0-5]|2[0-4][0-9]|[0-1][0-9][0-9]|[1-9][0-9]|[0-9])){3})|localhost|([a-zA-Z0-9\-\u00C0-\u017F]+\.)+([a-zA-Z]{1,}))(:[0-9]+)?(\/(([a-zA-Z0-9$\-_.+!*'(),;:@&=]|%[0-9a-fA-F]{2})*(\/([a-zA-Z0-9$\-_.+!*'(),;:@&=]|%[0-9a-fA-F]{2})*)*)?(\?([a-zA-Z0-9$\-_.+!*'(),;:@&=\/?]|%[0-9a-fA-F]{2})*)?(\#([a-zA-Z0-9$\-_.+!*'(),;:@&=\/?]|%[0-9a-fA-F]{2})*)?)?$/;
 
   return rg.test(u);
@@ -39,9 +39,7 @@ export class InvalidURL {
                 document.location.href = link;
               } catch (error) {
                 alert(
-                  'Your browser returned an error:\n' +
-                    error +
-                    '\nCheck the console for details.\nThis usually means that the link IS actually invalid, and we cannot navigate to it.',
+                  `Your browser returned an error:\n${error}\nCheck the console for details.\nThis usually means that the link IS actually invalid, and we cannot navigate to it.`,
                 );
                 throw error;
               }
@@ -60,7 +58,7 @@ export default class Goto extends Component<{
 }> {
   render() {
     if (typeof window !== 'undefined')
-      document.body.className += ' ' + style('goto');
+      document.body.className += ` ${style('goto')}`;
     let t: string;
     if (this.props.destination) {
       t = this.props.destination;
@@ -113,13 +111,13 @@ export default class Goto extends Component<{
       t =
         t.startsWith('https://youtube.com/watch?v=') ||
         t.startsWith('https://www.youtube.com/watch?v=')
-          ? t + '&has_verified=true'
+          ? `${t}&has_verified=true`
           : t;
 
       // eslint-disable-next-line
       if (t.toLowerCase().startsWith('javascript:')) {
         if (typeof window !== 'undefined') {
-          document.body.className += ' ' + style('xsswarning');
+          document.body.className += ` ${style('xsswarning')}`;
           document.title = 'Warning: Potential XSS Attack';
         }
         const back = () => {
@@ -188,7 +186,7 @@ export default class Goto extends Component<{
           t.toLowerCase().startsWith('http://')
         )
       )
-        t = 'https://' + t;
+        t = `https://${t}`;
 
       if (!valURL(t)) {
         return InvalidURL.create(t);

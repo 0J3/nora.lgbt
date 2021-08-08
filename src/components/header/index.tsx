@@ -4,7 +4,7 @@ import style from './style.scss';
 
 const Header: FunctionalComponent = () => {
   return (
-    <header class={style.header + ' s_header'} id='header'>
+    <header class={`${style.header  } s_header`} id='header'>
       <h1>0J3</h1>
       <nav>
         <Link activeClassName={style.active} href='/'>

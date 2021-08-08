@@ -19,7 +19,7 @@ class Notfound extends Component<
         <h1>Error 404</h1>
         <p>
           <Typewriter
-            text={`That page doesn't exist`}
+            text={'That page doesn\'t exist'}
             interval={75}
             cursorFlashes={2}
             done={() => {
@@ -35,7 +35,7 @@ class Notfound extends Component<
           <MozLink href='/'>
             <h4>
               <Typewriter
-                text={`Back to Home`}
+                text={'Back to Home'}
                 interval={75}
                 cursorFlashes={100}
               />
