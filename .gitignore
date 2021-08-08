@@ -3,3 +3,4 @@ node_modules
 /*.log
 /d
 /dist
+size-plugin.json
