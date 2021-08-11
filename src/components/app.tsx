@@ -21,8 +21,8 @@ const App: FunctionalComponent = () => {
       class={
         typeof window !== 'undefined'
           ? `route_${document.location.pathname
-            .replace('/', '')
-            .replace(/\//g, '_')}`
+              .replace('/', '')
+              .replace(/\//g, '_')}`
           : ''
       }
     >
@@ -82,6 +82,8 @@ const App: FunctionalComponent = () => {
           <Route path='/signing' component={Signing} />
           {/* ROUTE /bg */}
           <Route path='/bg' component={AboutBg} />
+          {/* ROUTE /bg/img/:img */}
+          <Route path='/bg/img/:img' component={Bg} />
           {/* ROUTE /bg/:clr */}
           <Route path='/bg/:clr' component={Bg} />
           {/* ROUTE /bg/:r/:g/:b */}

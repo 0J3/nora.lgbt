@@ -12,21 +12,29 @@ export default class Bg extends Component<{
   g?: number;
   b?: number;
   a?: number;
+  img?: string;
 }> {
   componentDidMount() {
     document.documentElement.setAttribute('data-transparentBg', 'true');
     document.body.setAttribute('data-noHeader', 'true');
   }
   render() {
-    return (
+    return this.props.img ? (
+      <div
+        className={Class('bg')}
+        style={{
+          backgroundImage: `url(${this.props.img})`,
+        }}
+      />
+    ) : (
       <div
         className={Class('bg')}
         style={{
           backgroundColor: this.props.clr
-            ? `#${  decodeURIComponent(this.props.clr)}`
+            ? `#${decodeURIComponent(this.props.clr)}`
             : this.props.a
-              ? `rgba(${this.props.r},${this.props.g},${this.props.b},${this.props.a})`
-              : `rgb(${this.props.r},${this.props.g},${this.props.b})`,
+            ? `rgba(${this.props.r},${this.props.g},${this.props.b},${this.props.a})`
+            : `rgb(${this.props.r},${this.props.g},${this.props.b})`,
         }}
       />
     );
