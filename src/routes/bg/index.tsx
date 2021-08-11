@@ -12,18 +12,21 @@ export default class Bg extends Component<{
   g?: number;
   b?: number;
   a?: number;
-  img?: string;
 }> {
   componentDidMount() {
     document.documentElement.setAttribute('data-transparentBg', 'true');
     document.body.setAttribute('data-noHeader', 'true');
   }
   render() {
-    return this.props.img ? (
+    return typeof this.props.b === 'undefined' &&
+      typeof this.props.clr === 'undefined' ? (
       <div
         className={Class('bg')}
         style={{
-          backgroundImage: `url(${this.props.img})`,
+          backgroundImage: `url(${
+            document?.location?.hash?.replace('#', '') ??
+            'https://wallpapercave.com/wp/wp5702075.png'
+          })`,
         }}
       />
     ) : (
