@@ -23,10 +23,10 @@ export default class Bg extends Component<{
       <div
         className={Class('bg')}
         style={{
-          backgroundImage: `url(${
+          background: `url('${
             document?.location?.hash?.replace('#', '') ??
             'https://wallpapercave.com/wp/wp5702075.png'
-          })`,
+          }')`,
         }}
       />
     ) : (
