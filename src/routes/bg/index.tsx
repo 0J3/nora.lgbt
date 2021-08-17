@@ -16,6 +16,7 @@ export default class Bg extends Component<{
   componentDidMount() {
     document.documentElement.setAttribute('data-transparentBg', 'true');
     document.body.setAttribute('data-noHeader', 'true');
+    document.documentElement.setAttribute('data-noCursor', 'true');
   }
   render() {
     return typeof this.props.b === 'undefined' &&

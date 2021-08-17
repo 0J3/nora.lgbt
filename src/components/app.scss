@@ -23,6 +23,12 @@
   --headerSize: 0 !important;
 }
 
+// ANCHOR [data-noCursor]
+[data-noCursor],
+[data-noCursor] * {
+  cursor: none;
+}
+
 // ANCHOR mobile
 @media screen and (max-width: vars.$mobile) {
   .pageContents {
