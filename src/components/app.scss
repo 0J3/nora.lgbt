@@ -17,6 +17,12 @@
   }
 }
 
+// ANCHOR [data-noHeader]
+[data-noHeader],
+[data-noHeader] * {
+  --headerSize: 0 !important;
+}
+
 // ANCHOR mobile
 @media screen and (max-width: vars.$mobile) {
   .pageContents {
