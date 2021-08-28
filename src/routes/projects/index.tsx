@@ -75,7 +75,7 @@ const projects: Project[] = [
   },
   {
     name: 'Nora.LGBT',
-    description: 'The site you\'re on right now i guess',
+    description: "The site you're on right now i guess",
     projURL: 'https://nora.lgbt/about',
     repoURL: 'https://github.com/0J3/nora.lgbt',
   },
@@ -84,6 +84,12 @@ const projects: Project[] = [
     description: 'Nezuko is the best girl',
     projURL: 'https://nezuko.nora.lgbt/',
     repoURL: 'https://github.com/0J3/NezukoBD',
+  },
+  {
+    name: '3qmk.xyz',
+    description: 'The website for one of my friends (3qmk/yvonne)',
+    projURL: 'https://3qmk.xyz/',
+    repoURL: 'https://github.com/ku-ts/site',
   },
 ];
 
