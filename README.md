@@ -1,5 +1,5 @@
 # MOVED
-This repository has moved to [`MokiyCodes`/`nora.lgbt`](https://github.com/MokiyCodes/nora.lgbt)
+This repository has moved to [`MokiyCodes`](https://github.com/MokiyCodes/)/[`nora.lgbt`](https://github.com/MokiyCodes/nora.lgbt)
 
 ## [nora.lgbt](https://nora.lgbt?ref=ghreadme)
 
