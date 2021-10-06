@@ -1,62 +1,62 @@
 {
-  "name": "nora.lgbt",
-  "description": "a thing uwu",
-  "version": "0.0.0",
-  "scripts": {
-    "build": "preact build",
-    "serve": "sirv build --port 8080 --cors --single",
-    "dev": "preact watch",
-    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
-    "test": "jest ./tests"
-  },
-  "eslintConfig": {
-    "parser": "@typescript-eslint/parser",
-    "extends": [
-      "preact",
-      "plugin:@typescript-eslint/recommended"
-    ],
-    "ignorePatterns": [
-      "build/"
-    ]
-  },
-  "dependencies": {
-    "@nodelib/fs.stat": "^2.0.5",
-    "preact": "^10.5.14",
-    "preact-render-to-string": "^5.1.19",
-    "preact-router": "^3.2.1"
-  },
-  "devDependencies": {
-    "@types/enzyme": "^3.10.5",
-    "@types/jest": "^26.0.8",
-    "@typescript-eslint/eslint-plugin": "^4.29.0",
-    "@typescript-eslint/parser": "^4.29.0",
-    "css-loader": "^1.0.0",
-    "css-modules-typescript-loader": "^2.0.1",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-preact-pure": "^2.2.0",
-    "eslint": "^6.8.0",
-    "eslint-config-preact": "^1.1.1",
-    "eslint-plugin-react": "^7.24.0",
-    "jest": "^26.2.2",
-    "jest-preset-preact": "^4.0.2",
-    "preact-cli": "^3.2.2",
-    "sass": "^1.35.1",
-    "sass-loader": "^10.0.2",
-    "sirv-cli": "^1.0.0-next.3",
-    "style-loader": "^0.23.1",
-    "typescript": "^3.7.5",
-    "webpack": "^5.49.0",
-    "webpack-cli": "^3.3.0"
-  },
-  "jest": {
-    "preset": "jest-preset-preact",
-    "setupFiles": [
-      "<rootDir>/tests/__mocks__/browserMocks.ts",
-      "<rootDir>/tests/__mocks__/setupTests.ts"
-    ]
-  },
-  "private": false,
-  "repository": "git@github.com:0J3/nora.lgbt.git",
-  "author": "0J3 <git@wafflepowered.com>",
-  "license": "MIT"
+	"name": "nora.lgbt",
+	"description": "a thing uwu",
+	"version": "0.0.0",
+	"scripts": {
+		"build": "preact build",
+		"serve": "sirv build --port 8080 --cors --single",
+		"dev": "preact watch",
+		"lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
+		"test": "jest ./tests"
+	},
+	"eslintConfig": {
+		"parser": "@typescript-eslint/parser",
+		"extends": [
+			"preact",
+			"plugin:@typescript-eslint/recommended"
+		],
+		"ignorePatterns": [
+			"build/"
+		]
+	},
+	"dependencies": {
+		"@nodelib/fs.stat": "^2.0.5",
+		"preact": "^10.5.14",
+		"preact-render-to-string": "^5.1.19",
+		"preact-router": "^3.2.1"
+	},
+	"devDependencies": {
+		"@types/enzyme": "^3.10.5",
+		"@types/jest": "^26.0.8",
+		"@typescript-eslint/eslint-plugin": "^4.29.0",
+		"@typescript-eslint/parser": "^4.29.0",
+		"css-loader": "^1.0.0",
+		"css-modules-typescript-loader": "^2.0.1",
+		"enzyme": "^3.11.0",
+		"enzyme-adapter-preact-pure": "^2.2.0",
+		"eslint": "^6.8.0",
+		"eslint-config-preact": "^1.1.1",
+		"eslint-plugin-react": "^7.24.0",
+		"jest": "^26.2.2",
+		"jest-preset-preact": "^4.0.2",
+		"preact-cli": "^3.2.2",
+		"sass": "^1.35.1",
+		"sass-loader": "^10.0.2",
+		"sirv-cli": "^1.0.0-next.3",
+		"style-loader": "^0.23.1",
+		"typescript": "^3.7.5",
+		"webpack": "^5.49.0",
+		"webpack-cli": "^3.3.0"
+	},
+	"jest": {
+		"preset": "jest-preset-preact",
+		"setupFiles": [
+			"<rootDir>/tests/__mocks__/browserMocks.ts",
+			"<rootDir>/tests/__mocks__/setupTests.ts"
+		]
+	},
+	"private": false,
+	"repository": "git@github.com:0J3/nora.lgbt.git",
+	"author": "Mokiy <git@wafflepowered.com>",
+	"license": "MIT"
 }

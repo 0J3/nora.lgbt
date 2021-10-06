@@ -1,6 +1,6 @@
 # [nora.lgbt](https://nora.lgbt?ref=ghreadme)
 
-0J3's personal website or something
+Mokiy's personal website or something
 
 ## Commands
 
